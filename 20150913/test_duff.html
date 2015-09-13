@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>循环</title>
+	<script src="duff_device.js"></script>
+</head>
+<body>
+	<button onclick="test()"></button>
+	<script>
+		function test(){
+			var items=[],i=0;
+			while(i<5000){
+				items.push(i);
+				i++;
+			}
+
+			console.time();
+			loop(items);
+			console.timeEnd();
+
+			console.time();
+			duff_origin(items);
+			console.timeEnd();
+		}
+
+		function loop(items){
+			for(var i=0,len=items.length;i<len;i++){
+				process(items[i]);
+			}
+		}
+
+		function process(i){
+			Math.log(i+1);
+		}
+	</script>
+</body>
+</html>
