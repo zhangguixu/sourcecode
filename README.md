@@ -30,3 +30,44 @@
 	响应接口
 	-使用定时器进行时间分片，来解决浏览器限制的问题
 	-web work的应用，可以带来的好处和变化
+
+-20160105
+
+	-js模拟类机制代码示例，生成类，类继承,
+	-函数调用的this取值,E5的bind的兼容性实现
+	-利用立即执行函数和闭包来实现私有作用域
+
+#改变文件夹命名规则，原因是不好索引代码和知识点，会进行整理
+
+-class
+
+	-js模拟类机制代码示例，生成类，类继承,
+	-函数调用的this取值,E5的bind的兼容性实现
+	-利用立即执行函数和闭包来实现私有作用域
+
+-event & listener
+
+	-addEventListener/removeEventListener
+		-type 事件
+			-click,dbclick,mousemove,mouseover,mouseout,focus,blur,change,submit
+		-listener callback
+		-userCapture
+			-false 默认进行事件冒泡(从内往外)
+			-true  事件捕捉模式，从外到内传播
+	-事件对象
+		-button,ctrlKey,altKey,shiftKey,metaKey,isChar(bool)
+		-charCode,keyCode,which
+		-pageX,pageY,screenX,screenY,
+		-currentTarget,target,originalTarget,relatedTarget
+
+	-切换上下文(this)
+		-$.proxy
+
+	-委托事件
+	原理：事件的冒泡机制，直接给父元素绑定事件监听，用来检测其子元素内发生的事件
+	$('ul').delegate('li','click',function(){})
+
+	-自定义事件
+	jQuery的trigger()
+
+	-发布/订阅模式（原生的实现，基于jQuery的实现）
