@@ -73,7 +73,7 @@
 	-发布/订阅模式（原生的实现，基于jQuery的实现）
 
 -model
-	
+
 	-思路：在js应用中做数据管理
 		-不足：前端并没有请求/响应的模型，没办法访问服务器端的变量，甚至远程取回的数据只是临时的保存在客户端
 		-优点：数据存储速度非常快，数据从内存中获取，交互操作可以得到瞬间响应，大大地提高用户的体验
@@ -81,3 +81,28 @@
 	-命名空间：进行管理
 
 	-ORM(构建对象关系映射)，数据管理和模型
+
+	-持久化记录:GUID,自动化处理
+
+	-装载数据：跨域的问题
+		-直接嵌套数据
+		-Ajax：
+			-同源策略：同一个域名，子域名，地址的端口也一样
+			-CORS：赋予了前端代码访问可信的远程服务的权限
+				在HTTP协议的响应头里
+				Access-Control-Allow-Origin:example.com
+				Access-Control-Request-Metho:GET,POST
+
+				认证：
+				Access-Control-Request-Headers:Authorization
+
+				var req=new XMLHttpRequest();
+				req.open("POST","/endpoint",true);
+				req.setRequestHeader("Authorization",oauth_signature);
+		-JSONP:通过创建一个script标签，所辖的外部文件包含一段JSON数据，数据是由服务器所返回的，作为参数包装在一个函数调用中，script标签获取脚本文件并不受跨域的限制，所有浏览器都支持这种技术
+
+	-本地存储数据
+		-cookies:容量小（4KB），会发给服务器端
+		-H5本地存储：容量大，不会发给服务器端
+			-local storage
+			-session storage
