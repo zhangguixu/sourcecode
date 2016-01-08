@@ -106,3 +106,6 @@
 		-H5本地存储：容量大，不会发给服务器端
 			-local storage
 			-session storage
+
+	-用POST的方式打开一个新的页面
+		window.open()/window.location.href都只能是get方式提交参数

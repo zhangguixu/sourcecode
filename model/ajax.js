@@ -26,6 +26,7 @@ var ajax={
 		var req=this.create();
 		if(req){
 			req.open('GET',url,true);
+			req.send(null);
 			req.onreadystatechange=function(){
 				if(req.readyState==4){
 					if(req.status==200){
