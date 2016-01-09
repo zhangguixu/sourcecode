@@ -109,3 +109,10 @@
 
 	-用POST的方式打开一个新的页面
 		window.open()/window.location.href都只能是get方式提交参数
+
+-form
+
+	-validation
+		-是否为空
+		-手机号码
+		-邮箱
