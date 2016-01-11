@@ -63,7 +63,7 @@
 	-切换上下文(this)
 		-$.proxy
 
-	-委托事件
+	-委托事件【delegate.js】
 	原理：事件的冒泡机制，直接给父元素绑定事件监听，用来检测其子元素内发生的事件
 	$('ul').delegate('li','click',function(){})
 
