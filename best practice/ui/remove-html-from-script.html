@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>客户端模板简单示例</title>
+</head>
+<body>
+	<ul id="list">
+
+	</ul>
+
+	<!--模板,这种在模型插件里面见到过-->
+	<script type="text/x-template" id="list-item">
+		<li><a href="%s">%s</a></li>
+	</script>
+	<script>
+		function sprintf(text){
+			var i=1,args=arguments;
+			return text.replace(/%s/g,function(){
+				return (i<args.length)?args[i++]:'';
+			});
+		}
+
+		function addItem(url,text){
+			var script=document.getElementById('list-item'),
+				list=document.getElementById('list'),
+				template=script.text,
+				result=sprintf(template,url,text),
+				div=document.createElement('div');
+
+			div.innerHTML=result.replace(/^\s*/,'');
+
+			list.appendChild(div.firstChild);
+		}
+
+		addItem('/item/4','Fourth item');
+	</script>
+</body>
+</html>

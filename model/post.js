@@ -8,12 +8,17 @@ window.post=function(url,data){
 	var form=document.createElement('form');
 
 
-	//解析data，实现携带参数,利用E5标准
-	var properties=Object.getOwnPropertyNames(data);
+	// //解析data，实现携带参数,利用E5标准
+	// var properties=Object.getOwnPropertyNames(data);
 
-	for (var i in properties){
-		createInput(properties[i],data[properties[i]]);
-	}
+	// for (var i in properties){
+	// 	createInput(properties[i],data[properties[i]]);
+	// }
+	for(var key in data){
+		if(data.hasOwnProperty(key)){
+			createIntput(key,data[key]);
+		}
+	};
 
 
 	//作用域分割
