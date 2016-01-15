@@ -160,4 +160,20 @@
 		-规则1：隔离应该逻辑
 
 		-规则2：不要分发event对象
-	
+
+	-compare
+
+		-检测原始值 typeof（string,number,boolean,undefined,function）
+					但是不能对null进行检测，低效的做法
+
+		-检测引用值（也称为对象）instanceof
+			typeof 引用值 返回都是 object
+
+		-检测函数 typeof或者 in
+
+		-检测数组
+			-鸭式辨型
+			-Kangax（ECMA5和类库采用的方式）
+
+		-检测属性
+			in & hasOwnProperty()
