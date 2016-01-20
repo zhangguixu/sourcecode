@@ -113,6 +113,9 @@
 		-手机号码
 		-邮箱
 
+	-cookie
+		什么是cookie，特点，作用，js操作
+
 -control
 
 	-概念
