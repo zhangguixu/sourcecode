@@ -11,7 +11,7 @@ function attachEventListener(target,type,callback,capture){
 		target.attachEvent('on'+type,callback);
 	}else{ //0级DOM事件
 		type='on'+type;
-		
+
 		//判断是否已经注册回调函数
 		if(typeof target[type] ==== 'function'){
 			oldCallBack=target[type];

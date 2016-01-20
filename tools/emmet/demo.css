@@ -1,0 +1,55 @@
+/*
+	值
+
+		指令(w100)   +  键(tab)
+		指令(h100)   +  键(tab)
+		指令(p10)    +  键(tab)
+		指令(m10)    +  键(tab)
+		指令(w10p)   +  键(tab)
+		指令(w10e)   +  键(tab)
+*/
+
+.demo{
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	margin: 10px;
+	width: 10%;
+	width: 10em;
+}
+
+/*
+	附件属性
+
+		指令(@f)   +  键(tab)
+		指令(@f+)  +  键(tab)
+		指令(b+)   +  键(tab)
+		指令(f+)   +  键(tab)
+*/
+
+@font-face {
+	font-family:;
+	src:url();
+}
+
+@font-face {
+	font-family: 'FontName';
+	src: url('FileName.eot');
+	src: url('FileName.eot?#iefix') format('embedded-opentype'),
+		 url('FileName.woff') format('woff'),
+		 url('FileName.ttf') format('truetype'),
+		 url('FileName.svg#FontName') format('svg');
+	font-style: normal;
+	font-weight: normal;
+}
+
+.demo{
+	background: #fff url() 0 0 no-repeat;
+	font: 1em Arial,sans-serif;
+}
+/**/
+/**/
+/**/
+/**/
+/**/
+/**/

@@ -41,6 +41,9 @@
 
 -event & listener
 
+	-event loop
+		http://www.ruanyifeng.com/blog/2013/10/event_loop.html
+
 	-addEventListener/removeEventListener
 		-type 事件
 			-click,dbclick,mousemove,mouseover,mouseout,focus,blur,change,submit
@@ -137,3 +140,9 @@
 -html5
 
 	Peter Lubbers\Brian Albers\Frank Salim HTML5程序设计（2版）读书笔记
+
+-tools
+
+	存储一些便捷的插件工具的指令，来提高开发的效率
+
+	-emmet

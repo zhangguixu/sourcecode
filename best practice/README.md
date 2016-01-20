@@ -50,6 +50,12 @@
 	-检测属性
 		in & hasOwnProperty()
 
+	-检测是不是数值
+		isNaN()：检测parseFloat()和parseInt()
+				判断是否是合法的数字或者检测算数错误
+	-undefined == null //true
+		undefined === null //false
+
 -config data【避免HardCoded】
 
 	-配置数据：

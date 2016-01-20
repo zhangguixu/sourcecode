@@ -1,0 +1,118 @@
+<!--
+	初始化：
+
+		指令(html:5)  +   键(tab)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<!--
+	添加class、id:
+
+		指令(p.foo)       +  键(tab)
+		指令(p.bar)       +  键(tab)
+		指令(p.bar#foo)   +  键(tab)
+-->
+
+<p class="foo"></p>
+
+<p id="bar"></p>
+
+<p class="bar" id="foo"></p>
+
+<!--
+	定义HTML元素的内容和属性
+
+		指令(h1{foo})    +  键(tab)
+		指令(a[href=#])  +  键(tab)
+-->
+<h1>foo</h1>
+
+<a href="#"></a>
+
+<!--
+	标签的嵌套:
+
+		>：子元素的符号，表示嵌套的元素
+		+：同级标签符号
+		^：可以使该符号的标签提升一行
+
+		指令(ul>li)       +  键(tab)
+		指令(h1+h2)       +  键(tab)
+		指令(p>span^p)    +  键(tab)
+-->
+
+<ul>
+	<li></li>
+</ul>
+
+<h1></h1>
+<h2></h2>
+
+<p><span></span></p>
+<p></p>
+
+<!--
+	分组:
+
+		指令((.foo>h1)+(.bar>h2))   +  键(tab)
+-->
+
+<div class="foo">
+	<h1></h1>
+</div>
+<div class="bar">
+	<h2></h2>
+</div>
+
+<!--
+	隐式标签,自动根据上下文
+
+		li：用于ul和ol中
+		tr：用于table、tbody、thead和tfoot中
+		td：用于tr中
+	option：用于select和optgroup中
+
+		在ul中
+		指令(.active>a)   +  键(tab)
+-->
+
+<ul>
+	<li class="active"><a href=""></a></li>
+</ul>
+
+<!--
+	定义多个元素：
+
+		*：多个元素
+
+		指令(ul>li*3>a)  +  键(tab)
+-->
+
+<ul>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+	<li><a href=""></a></li>
+</ul>
+
+<!--
+	定义多个带属性的元素
+
+		指令(ul>li.item$*3)  +  键(tab)
+-->
+
+<ul>
+	<li class="item1"></li>
+	<li class="item2"></li>
+	<li class="item3"></li>
+</ul>
+
