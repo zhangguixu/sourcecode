@@ -41,3 +41,30 @@ function messageHandler(e){
 		//忽略来自未知源的消息
 	}
 }
+
+/*
+	[???暂时理解不了]
+	Framebusting技术：
+		应用程序首先检测其所在的窗口是否为最外层的窗口，
+		若不是，则跳脱包含它的框架
+*/
+
+//在iframe中使用postMessage实现互信页面握手通信
+
+var framebustTimer;
+var timeout=3000; //超时时间设为3s
+
+if(window !== window.top){
+	framebustTimer=setTimeout(
+		function(){
+			window.top.location=location;
+	},timeout);
+}
+
+window.addEventListener('message',function(e){
+	switch(e.origin){
+		case trustedFrame:
+			clearTimeout(framebustTimer);
+			break;
+	}
+},true);
