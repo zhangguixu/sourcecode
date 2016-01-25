@@ -99,6 +99,13 @@
 			[events]loadstart,progress,abort,error,load,loadend
 			保留readystatechange事件
 
+		-FormData
+			可以通过JavaScript用一些键值对来模拟一系列表单控件，
+			可以使用XMLHttpRequest的send()方法来异步提交这些
+			表单，比起普通的ajax，使用FormData的最大优点就是
+			我们可以异步上传一个二进制文件
+
+
 -WebSockets API
 
 	HTML5中最强大的通信功能，定义了一种全双工通信信道，仅通过web上的一个socket
@@ -120,5 +127,36 @@
 					客户端发送一个包含消息的响应，如果时间到了服务器没有收到通知，
 					则会发送一个响应消息来终止打开的请求。并无性能的实质改变
 
-		-流解决：
+		-流解决：浏览器向服务器发送一个完整的HTTP请求，但是服务器会发送并保持一个处
+					于打开状态的响应，该响应持续更新并无限期处于打开状态，每当有消息
+					可发送时，该响应就会被更新，但服务器永远不会发出响应完成的信号，
+					这样连接就会一直保持在打开状态以便后续消息的发送。
+
+		-websocket 服务器
+
+-Form API
+
+	HTML5 Forms的核心设计理念：规范的核心是功能性动作和语义，而非外观和显示效果
+
+	-新的输入型控件
+
+		根据新的设计原则，在旧的浏览器中新的表单控件会平滑降级
+
+		-新的控件
+			tel,email,url,search,range,number
+			(color,datetime,time,date,week,month)
+			<progress></progress>
+
+	-新的函数和特性
+
+		placeholder、autocomplete、autofocus、spellcheck
+
+		list & datalist、min & max & step & valueAsNumber
+
+		required
+
+	-表单验证
+
+		HTML5的表单验证可让用户快速获得重要反馈，
+		但是正确性方面绝对不应依赖于它
 

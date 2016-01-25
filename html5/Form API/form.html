@@ -1,0 +1,89 @@
+<!--
+	新的函数和特性
+-->
+
+<!--
+	1、placeholder
+-->
+<input name="name" type="text" placeholder="姓名">
+
+<!--
+	2、autocomplete
+
+		用来保护敏感数据，避免本地浏览器对它们进行不安全的存储
+
+		on：该字段无需受到保护，值可以被保存和恢复
+		off: 该字段受到保护，值不可以被保存
+		unspecified:<form>的默认设置
+-->
+<input type="text" autocomplete="off">
+
+<!--
+	3、autofocus
+
+		页面载入时，通过autofocus的特性可以指定某个表单获得输入
+		焦点，每个页面只允许出现一个autofocus
+-->
+<input type="search" autofocus>
+
+<!--
+	4、spellcheck
+
+		可以对带有文本内容的输入控件和textarea控件设置spellcheck
+		属性，设置完成后，它会询问浏览器是否应该给出拼写检查结果
+		反馈
+		大部分浏览器默认启用了spellcheck
+-->
+<textarea spellcheck="true"></textarea>
+
+<!--
+	5、list & datalist
+
+		通过组合使用list特性和datalist元素，开发人员能够为某个输入
+		空间构造一张选值列表
+
+		1）创建id特性值唯一的datalist元素，该元素可插入文档任意位
+			置
+		2）添加若干option元素作为datalist的子元素，表示某控件推荐
+			选值的全集
+-->
+<datalist id="contactList">
+	<option value="" label=""></option>
+	<option value="" label=""></option>
+	<option value="" label=""></option>
+</datalist>
+
+<input type="email" list="contactList">
+
+<!--
+	6、min & max & step & valueAsNumber
+
+		min & max:
+
+			作为<input type="range">控件属性，设置min和max，可以将
+			range输入框的数值输入范围限定在最低值和最高值之间
+
+		step:
+
+			设置step特性能够制定输入值递增或递减的粒度
+
+		valueAsNumber:
+
+			完成控件值类型在文本与数值间的相互转换，既是setter函数
+			又是getter函数，可用于为输入型控件设置number值，输入的
+			数值必须同时满足min、max和step
+-->
+<input type="range" min="0" max="100" value="3" step="5">
+
+<script>
+	document.getElementById('confidence').valueAsNumber(65);
+</script>
+
+<!--
+	7、required
+
+		一旦为某输入型控件设置了required特性，那么此项必填，否则
+		无法提交表单
+-->
+<input type="text" required>
+

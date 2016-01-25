@@ -1,0 +1,140 @@
+<!--
+	DOCTYPE（文档模式）:
+
+		1、对文档进行有效性验证
+
+			告诉用户代理或浏览器这个文档是按照什么DTD写的，但是
+			这个动作是被动的，每次页面加载时，浏览器并不会下载
+			DTD，并检查合法性，只有手动校验页面时才启用
+
+		2、决定浏览器的呈现模式
+
+			通知浏览器读取文档时用哪种解析算法，如果没有写，浏览
+			器会按照自身的规则对代码进行解析，可能会严重影响html
+			排版布局。
+
+			浏览器有三种解析HTML文档的方式：
+
+			·非怪异（标准）模式
+			·怪异模式
+			·部分怪异（近乎标准）模式
+
+	html5的简洁写法，向前向后兼容
+-->
+<!DOCTYPE html>
+
+
+<!--
+	charset（字符集）
+-->
+<meta charset="utf-8">
+
+
+<!--
+	lang（语言）
+-->
+<html lang="zh-cmn-Hans"></html><!--简体中文-->
+<html lang="zh-cmn-Hant"></html><!--繁体中文-->
+
+
+<!--
+	优先使用IE最新版本和Chrome
+-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+
+<!--
+	360使用Google Chrome Frame,即极核速
+-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="readerer" content="webkit">
+
+
+<!--
+	百度禁止转码，去除手机百度可能自行添加的广告
+-->
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<!--
+	SEO优化
+-->
+<!--标题title，seo最重要的部分，尽量突出关键字-->
+<title>title</title>
+<!--关键词keywords-->
+<meta name="keywords" content="your keywords">
+<!--页面描述内容description-->
+<meta name="description" content="your description">
+<!--网页作者author-->
+<meta name="author" content="author,email,address">
+<!--定义网页搜索引擎索引方式，robots协议，有取值：no,noindex,nofollow,all,index,follow-->
+<meta name="robots" content="index,follow">
+
+
+<!--
+	viewport:
+		让布局在移动浏览器上显示的更好
+
+		content参数：
+
+			·width          - viewport宽度（数值/device-width）
+			·height         - viewport高度（数值/device-height）
+			·initial-scale  - 初始缩放比例
+			·maximum-scale  - 最大缩放比例
+			·minimum-scale  - 最小缩放比例
+			·user-scalable  - 是否允许用户缩放（yes/no）
+-->
+
+<!--常见-->
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<!--
+	在minimal-ui IOS 7.1 beta 2 中新增属性，
+	可以在页面加载时最小化上下状态栏，是一个布尔值
+-->
+<meta name="viewport" content="width=device-width,user-scable=no,minimal-ui">
+<!--
+	适配 iphone6 和 iphone 6 plus
+
+	原因：
+		大部分4.7~5寸的安卓设备的viewport宽设为360px，iphone6 上却是375px
+		大部分5.5寸安卓机器的viewport宽为400px，iphone 6 plus 上却是414px
+-->
+<meta name="viewport" content="width=375">
+<meta name="viewport" content="width=414">
+
+
+<!--
+	IOS设备
+-->
+<!--添加到主屏后的标题（IOS 6 新增）-->
+<meta name="apple-mobile-web-app-title" content="标题" >
+<!--是否启用WebApp全屏模式-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<!--
+	设置状态栏的背景颜色，需要启用webapp全屏模式
+
+		content参数：
+			·default 默认
+			·black 黑色
+			·black-translucent 黑色半透明
+-->
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<!--禁止数字自动识别为电话号码-->
+<meta name="format-detection" content="telephone=no"/>
+<!--
+	IOS图标
+-->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
+<!---->
