@@ -33,6 +33,14 @@
 
 #改变文件夹命名规则，原因是不好索引代码和知识点，会进行整理
 
+-basis
+
+	基础JavaScript知识，方便查询
+
+	-array(properties & prototype)
+
+	-data type transform(数据类型转换)
+
 -class
 
 	-js模拟类机制代码示例，生成类，类继承,
@@ -139,7 +147,7 @@
 
 -html5
 
-	Peter Lubbers\Brian Albers\Frank Salim HTML5程序设计（2版）读书笔记
+	Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》读书笔记
 
 -tools
 
@@ -150,3 +158,7 @@
 -head
 
 	HTML head 头标签的总结
+
+-frame design
+
+	司徒正妹 《JavaScript 框架设计》读书笔记
