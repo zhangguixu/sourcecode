@@ -1,4 +1,4 @@
-#框架设计之种子模块
+#种子模块
 
 -命名空间[namespace]
 
@@ -45,3 +45,27 @@
 			3）跨文档，instanceof失效，在best practice/compare中有详细提到
 			4）IE下的种种，在IE下，typeof还会返回unknown的情况
 				typeof window.ActiveXObject
+
+	判定类型中出现了isXXX系列，但是有个问题就是isXXX系列会不断膨胀，而且似乎很难满足用户
+	的全部需求。因此，jQuery框架就实现了最常用的isFunction，isArray，isPlainObject则是用
+	来判定是否为纯净的JavaScript对象，制造它的最初目的是用于深拷贝，避开像window那样自己
+	引用自己的对象，isEmptyObject是用于数据缓存系统，当此对象为空时，就可以删除它
+
+-domReady
+
+	window的load事件会在页面中的一切都加载完毕时触发
+
+	DOMContentLoaded事件在形成完整的DOM树之后就会触发，不理会图像、JavaScript文件、CSS文
+	件或其他资源是否已经下载完毕。与load事件不同，DOMContentLoaded支持在页面下载的早期添
+	加事件处理程序，这也就意味着用户能够尽早地与页面进行交互。
+
+	domReady其实是一种名为“DOMContentLoaded”事件的别称。在一些书中会教导我们把JavaScript
+	逻辑写在window.onload回调中，以防DOM树还没有建完就开始对节点进行操作，导致出错。
+
+	但是对于框架来说，越早介入对DOM的干涉就越好，如要进行什么特征侦测之类的。此外，domReady
+	还可以满足用户提前绑定事件的需求，因为有时页面图片等资源过多，window.onload就迟迟不能
+	触发，这时若还没有绑定事件，用户点击哪个按钮都没有反应。
+
+	具体的策略
+	1）对于支持DOMContentLoaded事件的使用DOMContentLoaded事件
+	2）旧版本IE使用Diego Perini发现的著名hack

@@ -25,3 +25,27 @@ function attachEventListener(target,type,callback,capture){
 	}
 }
 
+/*=============================================================*/
+/*
+	【改进】利用js的惰性函数机制：
+		实现事件注册函数，由于各浏览器之间的差异，不得不在用的
+		时候做能力检测，单从功能上讲，已经做到了兼容浏览器，但
+		美中不足的是，每次绑定监听，都会再进行一次检测，这在真
+		实的环境中，显然是多余的，同一个应用环境中，其实只需要
+		检测一次即可
+*/
+function addEvent(type,element,callback){
+	if(element.addEventListener){
+		addEvent = function(type,element,callback){
+			element.addEventListener(type,callback,false);
+		}
+	} else if(element.attachEvent) {
+		addEvent = function(type,element,callback){
+			element.attachEvent(type,callback,false);
+		}
+	} else {
+		addEvent = function(type,element,callback){
+			element['on' + type] = callback;
+		}
+	}
+}
