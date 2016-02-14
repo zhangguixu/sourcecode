@@ -1,17 +1,17 @@
-#JavaScript 高级程序设计
+# JavaScript 高级程序设计
 
-##面向对象的程序设计
+## 面向对象的程序设计
 
 	ECMA-262把对象定义为：无序属性的集合，其属性可以包含基本值、对象或
 	者函数。
 
-	###理解对象
+### 理解对象
 
 		1.属性类型
 
 			[ECMAScript5]
 
-			*数据属性[Object.defineProperty()]
+			* 数据属性[Object.defineProperty()]
 				·[[Configurable]]
 				·[[Enumerable]]:for-in
 				·[[Writable]]
@@ -27,11 +27,11 @@
 					person.name; //zhang
 				`
 
-			*访问器属性[setter getter]
+			* 访问器属性[setter getter]
 				它们包含一对getter和setter函数，在读取访问器属性的时候
 				，会调用getter函数，返回有效的值，在写入访问器属性时，
 				会调用setter函数，并传入新值
-				
+
 ```javascript
 					var book = {
 						_year : 2004,

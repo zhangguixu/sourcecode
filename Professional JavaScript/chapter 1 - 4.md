@@ -2,7 +2,7 @@
 
 ##JavaScript 简介
 
-	>JavaScript 诞生于1995 年。当时，它的主要目的是处理以前由服务器端语
+	> JavaScript 诞生于1995 年。当时，它的主要目的是处理以前由服务器端语
 	言（如Perl）负责的一些输入验证操作。在JavaScript 问世之前，必须把表
 	单数据发送到服务器端才能确定用户是否没有填写某个必填域，是否输入了
 	无效的值。Netscape Navigator 希望通过JavaScript 来解决这个问题。自
