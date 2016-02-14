@@ -1,14 +1,14 @@
-前端学习代码（按日期来组织结构）
+#前端学习代码（按日期来组织结构）
 
--20150905
+##20150905
 
 	call 函数
 
--20150906
+##20150906
 
 	js加载方式及加载性能优化
 
--20150908
+##20150908
 
 	DOM编程
 
@@ -16,16 +16,16 @@
 
 			-最小化重绘和重排版
 
--20150911
+##20150911
 
 	事件托管：事件冒泡和父元素处理子元素
 
--20150913
+##20150913
 
 	性能优化
 		-循环（达夫设备），选择（优化选择条件），递归（栈不足），迭代，制表（缓存提速）
 
--20150915
+##20150915
 
 	响应接口
 	-使用定时器进行时间分片，来解决浏览器限制的问题
@@ -33,7 +33,7 @@
 
 #改变文件夹命名规则，原因是不好索引代码和知识点，会进行整理
 
--basis
+##basis
 
 	基础JavaScript知识，方便查询
 
@@ -41,13 +41,13 @@
 
 	-data type transform(数据类型转换)
 
--class
+##class
 
 	-js模拟类机制代码示例，生成类，类继承,
 	-函数调用的this取值,E5的bind的兼容性实现
 	-利用立即执行函数和闭包来实现私有作用域
 
--event & listener
+##event & listener
 
 	-event loop
 		http://www.ruanyifeng.com/blog/2013/10/event_loop.html
@@ -77,7 +77,7 @@
 
 	-发布/订阅模式（原生的实现，基于jQuery的实现）
 
--model
+##model
 
 	-思路：在js应用中做数据管理
 		-不足：前端并没有请求/响应的模型，没办法访问服务器端的变量，甚至远程取回的数据只是临时的保存在客户端
@@ -117,7 +117,7 @@
 	-用POST的方式打开一个新的页面
 		window.open()/window.location.href都只能是get方式提交参数
 
--form
+##form
 
 	-validation
 		-是否为空
@@ -127,7 +127,7 @@
 	-cookie
 		什么是cookie，特点，作用，js操作
 
--control
+##control
 
 	-概念
 		可以将控制器理解为应用中视图和模型之间的纽带，
@@ -141,24 +141,31 @@
 	-控制器
 		基于jQuery开发类Controller的类模板;
 
--best practice
+##best practice
 
 	Nicholas.C.Zakas《编写可维护的JavaScript》读书笔记
 
--html5
+##html5
 
 	Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》读书笔记
 
--tools
+##tools
 
 	存储一些便捷的插件工具的指令，来提高开发的效率
 
-	-emmet
+	*emmet
 
--head
+	*markdown
+
+##head
 
 	HTML head 头标签的总结
 
--frame design
+##frame design
 
-	司徒正妹 《JavaScript 框架设计》读书笔记
+	司徒正美 《JavaScript 框架设计》读书笔记
+
+##Professional JavaScript
+
+	Nicholas C.Zakas 《JavaScript 高级程序设计》3rd Edition
+	
