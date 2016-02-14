@@ -31,7 +31,7 @@
 				它们包含一对getter和setter函数，在读取访问器属性的时候
 				，会调用getter函数，返回有效的值，在写入访问器属性时，
 				会调用setter函数，并传入新值
-				`
+				```
 					var book = {
 						_year : 2004,
 						edition : 1
@@ -49,7 +49,7 @@
 						});
 					book.year = 2005;
 					book.edition; //2
-				`
+				```
 
 			*定义多个属性[Object.defineProperties]
 				`
