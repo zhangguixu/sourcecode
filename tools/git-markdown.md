@@ -28,7 +28,7 @@
 > 这里是引用
 
 * 图片与链接
-![baidu](http://baidu.com)
+[baidu](http://baidu.com)
 ![Mou icon](http://mouapp.com/Mou_128.png)
 
 * 粗体与斜体
@@ -45,8 +45,8 @@
 
 * 表格
 
-| Tables | Are | Cool |
-| ------ | :--: | ----: |
-| col 3 is | right-aligned | $12 |
-| col 2 is | centered | $12 |
-| zebra stripes | are neat | $1 |
+	| Tables | Are | Cool |
+	| ------ | :--: | ----: |
+	| col 3 is | right-aligned | $12 |
+	| col 2 is | centered | $12 |
+	| zebra stripes | are neat | $1 |
