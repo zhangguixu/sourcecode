@@ -22,6 +22,7 @@
 * 3
 
 2.有序列表
+
 1. 1
 2. 2
 3. 3
@@ -36,13 +37,15 @@
 ![Mou icon](http://mouapp.com/Mou_128.png)
 
 * 粗体与斜体
+
 **这里是粗体**
+
 *这里是斜体*
 
 * 代码框
-```javascript
-	function(){};
-```
+	```javascript
+		function(){};
+	```
 
 * 分割线
 ***
