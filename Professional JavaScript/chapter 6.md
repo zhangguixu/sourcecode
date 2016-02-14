@@ -184,7 +184,7 @@
 					上支持一个属性__proto__，在其他的实现上，则是不可见
 					需要注意的是：这个连接存在于实例与构造函数的原型对
 					象之间，而不是存在与实例与构造函数之间。 
-						![Person prototype 示意图](https://raw.githubusercontent.com/zhangguixu/sourcecode/master/Professional%20JavaScript/prototype.PNG)
+						![Person prototype 示意图](https://github.com/zhangguixu/sourcecode/raw/master/Professional%20JavaScript/prototype.PNG)
 					可以通过isPrototypeOf()来确定对象之间是否存在这种关
 					系
 						`
