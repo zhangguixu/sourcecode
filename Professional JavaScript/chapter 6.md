@@ -32,7 +32,7 @@
 				，会调用getter函数，返回有效的值，在写入访问器属性时，
 				会调用setter函数，并传入新值
 				
-				```
+				```javascript
 					var book = {
 						_year : 2004,
 						edition : 1
