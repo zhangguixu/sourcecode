@@ -433,7 +433,7 @@ toUTCString()
 	完整的UTC日期
 
 #### 日期/时间组件方法
-![查看 日期-时间组件方法.PNG](日期-时间组件方法.PNG)
+![查看 日期-时间组件方法.PNG](./img/日期-时间组件方法.PNG)
 
 
 ### RegExp类型
@@ -535,7 +535,26 @@ test()
 
 #### RegExp构造函数属性
 
-略
+>RegExp构造函数包含一些属性，这些属性适用于作用域中的所有正则表达式，并且基于所执行的最近一次正则表达式操作而变化。
+
+![RegExp属性](./img/RegExp属性.PNG)
+
+```javascript
+	var text = 'this has been a short summer';
+	var pattern = /(.)hort/g;
+
+	/*
+	 *注意：Opera不支持input、lastMatch、lastParen和Multiline属性
+	 *IE不支持multiline属性
+	 */
+	 if(pattern.test(text)){
+	 	console.log(RegExp.input); //this has been a short summer
+	 	console.log(RegExp.lastParen);//s
+	 	console.log(RegExp['$1']);//s
+	 	console.log(RegExp.lastMatch);//short
+	 	console.log(RegExp['$&']); //short
+	 }
+```
 
 #### 模式的局限性
 
@@ -1037,7 +1056,7 @@ encodeURIComponent() & decodeURIComponent()
 
 **Global对象的属性**
 
-![Global 对象的属性](Properties-of-Global.PNG)
+![Global 对象的属性](./img/Properties-of-Global.PNG)
 
 window对象
 
@@ -1056,7 +1075,7 @@ window对象
 
 **Math对象的属性**
 
-![Math 对象的属性](Properties-of-Math.PNG)
+![Math 对象的属性](./img/Properties-of-Math.PNG)
 
 **min() & max()**
 	
@@ -1096,7 +1115,7 @@ Math.round()
 
 **其他方法**
 
-![Math 其他方法](Function-of-Math.PNG)
+![Math 其他方法](./img/Function-of-Math.PNG)
 
 
 

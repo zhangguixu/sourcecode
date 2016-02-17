@@ -202,7 +202,7 @@ ECMAScript中的构造函数可用来创建特定的对象
 
 >无论什么时候，只要创建一个新函数，就会根据一组特定的规则为该函数创建一个prototype属性，这个属性指向函数的原型对象。默认情况下，所有原型对象都会自动获得一个constructor属性，有Person.prototype.constructor == Person当调用构造函数创建一个新实例后，该实例的内部包含一个指针，指向构造函数的原型对象，ECMA-262管这个指针叫\[\[Prototype\]\]，在Firefox,Safari和Chrome在每个对象上支持一个属性__proto__，在其他的实现上，则是不可见需要注意的是：这个连接存在于实例与构造函数的原型对象之间，而不是存在与实例与构造函数之间。 
 
-![Person prototype 示意图](Person-prototype.PNG)
+![Person prototype 示意图](./img/Person-prototype.PNG)
 
 *可以通过isPrototypeOf()来确定对象之间是否存在这种关系*
 
@@ -228,7 +228,7 @@ ECMAScript中的构造函数可用来创建特定的对象
 	person.sayName(); //zhang
 ```
 
-![Person 代码示意图](Person代码示意图.PNG)
+![Person 代码示意图](./img/Person代码示意图.PNG)
 
 *使用hasOwnProperty()可以知道属性是对象实例上的，或者是原型对象上的。*
 
@@ -291,7 +291,7 @@ in
 	friend.sayName(); //error
 ```
 
-![重写原型对象](重写原型对象.PNG)
+![重写原型对象](./img/重写原型对象.PNG)
 
 **原生对象的原型**
 	
@@ -423,7 +423,7 @@ in
 	instance.getSupperValue(); //true
 ```
 
-![原型链继承](原型链继承.PNG)
+![原型链继承](./img/原型链继承.PNG)
 
 **需要注意的几点**
 1.确定原型和实例的关系
