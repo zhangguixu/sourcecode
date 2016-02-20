@@ -95,6 +95,14 @@ typeof操作符
         'function'  --- 函数
         'object'    --- 对象 null 
 
+===严格相等
+
+```javascript
+    var a,b;
+    a = b = {x:1};
+    a == b;//true
+    a === b; //true
+```
 ### 语句
 ***
 
