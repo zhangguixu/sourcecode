@@ -10,12 +10,11 @@
 
 #### 事件冒泡
 
->event bubbling:事件开始时由最具体的元素(文档中嵌套层次最深的那个节点)接收，然后逐级向上传播到较为不具体的节点(文档).
+>event bubbling:事件开始时由最具体的元素(文档中嵌套层次最深的那个节点)接收，然后逐级向上传播到较为不具体的节点(文档)。
 
 例如：
 
 ```html
-<!DOCTYPE html>
 <html>
 <head>
     <title>Event Bubbling Example</title>
@@ -52,6 +51,7 @@ DOM2级事件规定的事件流包括三个阶段：`事件捕获阶段`、`处�
 
 ![DOM事件流](./img/DOM事件流.PNG)
 
+
 IE9、Opera、Firefox、Chrome 和Safari 都支持DOM 事件流；IE8 及更早版本不支持DOM 事件流。
 
 ### 事件处理程序
@@ -63,16 +63,16 @@ IE9、Opera、Firefox、Chrome 和Safari 都支持DOM 事件流；IE8 及更早�
 某个元素支持的每种事件，都可以使用一个与相应事件处理程序的同名的HTML特性来指定。这个特性的值应该是能够执行的JavaScript代码，或者也可以调用页面其他地方的定义的脚本。
 
 ```html
-<!--直接包含JavaScript代码-->
+<!-- 直接包含JavaScript代码 -->
 <input type="button" value="click me" onlclick="alert(&quot;clicked&quot;)">
 
-<!--调用页面其他地方的脚本，同时捕捉脚本错误-->
-<input type="button" value="click me" onlclick="try{showMessage();}catch(ex){}">
+<!-- 调用页面其他地方的脚本，同时捕捉脚本错误 -->
+<input type="button" value="click me" onlclick="try{showMessage();}catch(ex){};">
 
 <script>
     function showMessage(){
         alert('clicked');
-    } 
+    }
 </script>
 ```
 
@@ -252,7 +252,7 @@ var EventUtil = {
 
     只有cancelable属性设置为true的事件，才可以使用preventDefault()来取消其默认行为。
 
-3. stopPropagation() 
+3. stopPropagation()
 
     立即停止事件在DOM层次的传播，即取消进一步的事件捕获或冒泡
 
@@ -261,11 +261,11 @@ var EventUtil = {
     确定事件当前位于事件流的哪个阶段
 
     * 捕获阶段：eventPhase为1
-    
+
     * 处于目标对象上：eventPhase为2
-    
+
     * 冒泡阶段：eventPhase为3
-    
+
     ```javascript
     var btn = document.getElementById('myBtn');
     btn.onclick = function(event){
@@ -435,7 +435,7 @@ DOM3 级事件模块在DOM2 级事件模块基础上重新定义了这些事件�
     当用户滚动带滚动条的元素中的内容时，在该元素上面触发。<body\>元素中包含所加载页面的滚动条。
 
 8. DOMActive
-    
+
     不建议使用
 
 检测浏览器是否支持DOM2级事件规定的HTML事件
@@ -464,7 +464,7 @@ var isSupported = document.implementation.hasFeature("HTMLEvents", "2.0");
         ```
 
     2. 定义onload事件处理程序的方式2：
-        
+
         为<body\>元素添加一个onload属性
 
         ```html
@@ -474,7 +474,7 @@ var isSupported = document.implementation.hasFeature("HTMLEvents", "2.0");
             <title>Load Event Example</title>
         </head>
         <body onload="alert('Loaded!')">
-            
+
         </body>
         </html>
         ```
@@ -625,7 +625,7 @@ click，mousedown，mouseup，dbclick事件触发的顺序:
     显然，click和dbclick事件都会依赖于先行事件的触发。
 
     在IE8及其之前的版本，有一个bug：
-    
+
     1. mousedown
     2. mouseup
     3. click
@@ -644,7 +644,24 @@ var isSupported = document.implementation.hasFeature('MouseEvents','2.0');
 var isSupported = document.implementation.hasFeature('MouseEvent','3.0');
 ```
 
-**客户区坐标位置**
+**客户区坐标位置 clientX clientY**
+
+鼠标事件都是发生在浏览器视口中的特定位置上，这个位置保存在事件对象的`clientX`和`clientY`的属性中。所有浏览器都支持这两个属性。
+
+![客户区坐标](./img/客户区坐标.png)
+
+```javascript
+var div = document.getElement('myDiv');
+EventUtil.addHandler(div,'click',function(event){
+    event = EventUtil.getEvent(event);
+    alert('Client coordinates: '+event.clientX+','+event.clientY);
+})
+```
+
+*这些值中不包括页面滚动的距离，因此这个位置并不表示鼠标在页面上的位置*
+
+
+
 
 
 

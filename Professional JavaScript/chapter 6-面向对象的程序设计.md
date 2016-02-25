@@ -9,7 +9,7 @@
 ####属性类型
 
 [ECMAScript5] 数据属性[Object.defineProperty()]
-	
+
 	1. [[Configurable]]
 	2. [[Enumerable]]:for-in
 	3. [[Writable]]
@@ -29,7 +29,7 @@
 ```
 
 访问器属性[setter getter]
-	
+
 	它们包含一对getter和setter函数，在读取访问器属性的时候，会调用getter函数，
 	返回有效的值，在写入访问器属性时，会调用setter函数，并传入新值
 
@@ -159,7 +159,7 @@ ECMAScript中的构造函数可用来创建特定的对象
 此外，还有两点需要注意的：
 
 1.将构造函数当作函数构造函数与其他函数唯一的区别就是调用的方式不同，任何函数，只要通过new操作符来调用，那它就可以作为构造函数
-				
+
 ```javascript
 	//当作构造函数调用
 	var person = new Person('zhang',25,'programmer');
@@ -200,7 +200,7 @@ ECMAScript中的构造函数可用来创建特定的对象
 
 **理解原型对象**
 
->无论什么时候，只要创建一个新函数，就会根据一组特定的规则为该函数创建一个prototype属性，这个属性指向函数的原型对象。默认情况下，所有原型对象都会自动获得一个constructor属性，有Person.prototype.constructor == Person当调用构造函数创建一个新实例后，该实例的内部包含一个指针，指向构造函数的原型对象，ECMA-262管这个指针叫\[\[Prototype\]\]，在Firefox,Safari和Chrome在每个对象上支持一个属性__proto__，在其他的实现上，则是不可见需要注意的是：这个连接存在于实例与构造函数的原型对象之间，而不是存在与实例与构造函数之间。 
+>无论什么时候，只要创建一个新函数，就会根据一组特定的规则为该函数创建一个prototype属性，这个属性指向函数的原型对象。默认情况下，所有原型对象都会自动获得一个constructor属性，有Person.prototype.constructor == Person当调用构造函数创建一个新实例后，该实例的内部包含一个指针，指向构造函数的原型对象，ECMA-262管这个指针叫\[\[Prototype\]\]，在Firefox,Safari和Chrome在每个对象上支持一个属性__proto__，在其他的实现上，则是不可见需要注意的是：这个连接存在于实例与构造函数的原型对象之间，而不是存在与实例与构造函数之间。
 
 ![Person prototype 示意图](./img/Person-prototype.PNG)
 
@@ -294,7 +294,7 @@ in
 ![重写原型对象](./img/重写原型对象.PNG)
 
 **原生对象的原型**
-	
+
 >原生的引用类型，都是采用这种模式创建的，所有原生引用类型都在其构造函数的原型上定义了方法。
 
 **原型对象的问题**
@@ -341,7 +341,7 @@ in
 
 >基本思想是创建一个函数，该函数的作用仅仅是封装创建对象的代码，然后返回新创建的对象
 
-```javascript	
+```javascript
 	/*
 		创建一个具有额外方法的特殊数组，由于不能直接修
 		改Array构造函数，因此可以使用这个模式
@@ -479,7 +479,7 @@ in
 ```
 
 **优势：传递参数**
-	
+
 	即可以在子类型构造函数中向超类型构造函数传递参数
 
 ```javascript
@@ -528,7 +528,7 @@ in
 	instance1.sayAge(); //26
 
 	var instance2 = new SubType('z',29);
-	instance2.colors;//red blue grey 
+	instance2.colors;//red blue grey
 	instance2.sayName(); //z
 	instance2.sayAge(); //29
 ```
@@ -574,7 +574,7 @@ in
 		name : {
 			value : 'lao';
 		}
-	});	
+	});
 ```
 
 *如果只想让一个对象与另一个对象保持类似的情况下，原型式继承是完全可以胜任的*

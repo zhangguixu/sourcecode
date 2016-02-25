@@ -17,10 +17,10 @@ NodeList是一种类数组对象，用于保存一组有序的节点。它的独
 *下列这段代码能够加深对NodeList的认识，运行在浏览器可能会导致死机*
 
 ```javascript
-    var alldivs=document.getElementsByTagName("div");
-    for(var i=0;i<alldivs.length;i++){ //死循环，alldivs.length不断增加
+    var alldivs=document.getElementsByTagName('div');
+    for(var i= 0; i < alldivs.length;i++){ //死循环，alldivs.length不断增加
         console.log(alldivs.length);
-        document.body.appendChild(document.createElement("div"));
+        document.body.appendChild(document.createElement('div'));
     }
 ```
 
@@ -154,7 +154,7 @@ if(someNode.nodeType == 1){
 1. childNodes [返回NodeList/null]
     1. firstChild
     2. lastChild
-2. parentNode 
+2. parentNode
 3. previousSibling [返回NodeList/null]
 4. nextSibling [返回NodeList/null]
 5. ownerDocument [document]
@@ -165,7 +165,7 @@ if(someNode.nodeType == 1){
 以下四个方法，在`不支持子节点`的节点上调用，将会导致错误发生
 
 1. appendChild(childNode)
-    
+
     用于向childNodes列表的末尾添加一个节点，添加节点后，childNodes的新增节点、父节点及从以前的最后一个子节点的关系指针都会相应地得到更新
 
     ```javascript
@@ -183,7 +183,7 @@ if(someNode.nodeType == 1){
     ```
 
 2. insertBefore(childNode,ref-node/null)
-    
+
     可以将节点放在childNodes列表中的某个特定的位置上，如果参照节点为null，则与appendChild执行相同的操作。
 
     ```javascript
@@ -274,15 +274,15 @@ Document类型最常见的应用就是作为HTMLDocument实例的document对象�
 *在Firefox、Safari、Chrome 和Opera 中，可以通过脚本访问Document 类型的构造函数和原型。但在所有浏览器中都可以访问HTMLDocument类型的构造函数和原型，包括IE8 及后续版本。*
 
 1. 文档的子节点
-    
+
     1. document.documentElement
-    
+
         该属性始终指向HTML页面中的html元素
 
         ```html
         <html>
             <body>
-            
+
             </body>
         </html>
         <script>
@@ -291,9 +291,9 @@ Document类型最常见的应用就是作为HTMLDocument实例的document对象�
         html === document.firstChild;       //true
         </script>
         ```
-   
+
     2. document.body
-        
+
         直接指向<body>元素
 
 2. 文档信息
@@ -341,7 +341,7 @@ Document类型最常见的应用就是作为HTMLDocument实例的document对象�
 
         document.domain = 'p2p.wrox.com'; //紧绷的 出错
         ```
-   
+
     4. referrer
 
         取得来源页面的URL
@@ -353,7 +353,7 @@ Document类型最常见的应用就是作为HTMLDocument实例的document对象�
 3. 查找元素
 
     1. document.getElementById()
-        
+
         id必须与页面中元素的id特性严格匹配，包括大小写。如果页面中多个元素的ID值相同，只返回文档中第一次出现的元素。
 
         在IE7及较低版本还为此方法添加了一个有意思的"怪癖"：name特性与给定ID匹配的表单元素也会被该方法返回。因此，最好是`不让表单字段的name属性与其他元素的ID相同`
@@ -368,7 +368,7 @@ Document类型最常见的应用就是作为HTMLDocument实例的document对象�
         ```
 
     2. document.getElementsByTagName()
-    
+
         返回HTMLCollection对象
 
         ```html
@@ -390,17 +390,16 @@ Document类型最常见的应用就是作为HTMLDocument实例的document对象�
         返回带有给定name属性的所有元素
 
 4. 特殊集合
-    
     * document.anchors : 文档中所有带name属性的<a\>元素
 
     * document.forms : 包含文档中所有的<form\>元素
 
     * document.images : 包含文档中所有的<img\>元素
 
-    * document.links : 包含文档中所有带href属性的<a\>元素 
+    * document.links : 包含文档中所有带href属性的<a\>元素
 
 5. DOM一致性检测
-    
+
     由于DOM分为多个级别，也包含多个部分，因此检测浏览器实现了DOM的哪些部分就十分必要了。`document.implementation`属性就是为此提供相应信息和功能的对象，与浏览器对DOM的实现直接对应。
 
     ![DOM版本](./img/DOM版本.PNG)
@@ -412,7 +411,7 @@ Document类型最常见的应用就是作为HTMLDocument实例的document对象�
     *有时候返回true也不意味着实现与规范一致，因此最好除了检测hasFeature之外，还要同时使用能力检测*
 
 6. 文档写入
-    
+
     将输出流写入网页中，如果在页面完全加载之后执行，会重写整个页面
 
     1. write(string)
@@ -470,9 +469,9 @@ if (element.tagName.toLowerCase() === 'div'){
     所有HTML元素都由`HTMLElement`类型表示，不是直接通过这个类型，也是通过它的子类型来表示。有以下这些属性
 
     * id，元素在文档中的唯一标识符
-    
+
     * className，与元素的class属性对应
-    
+
     * title
     * lang
     * dir
@@ -483,7 +482,7 @@ if (element.tagName.toLowerCase() === 'div'){
          var div = document.getElementById('myDiv');
          div.id; //myDiv
          div.className;//bd
-    </script> 
+    </script>
     ```
 
     元素和对应的类型表：
@@ -541,7 +540,7 @@ if (element.tagName.toLowerCase() === 'div'){
     div.mycolor = 'red';
     div.getAttribute(mycolor); //null(IE除外)
     ```
-    
+
 4. 移除属性
 
     **removeAttribute()**
@@ -571,9 +570,9 @@ if (element.tagName.toLowerCase() === 'div'){
     在这里需要注意两个问题
 
     1. 针对attributes 对象中的特性，不同浏览器返回的顺序不同。这些特性在XML或HTML代码中出现的先后顺序，不一定与它们出现在attributes 对象中的顺序一致。
-    
+
     2. IE7 及更早的版本会返回HTML元素中所有可能的特性，包括没有指定的特性。换句话说，返回100 多个特性的情况会很常见。
-    
+
     ```javascript
     function outputAttribtues(element){
         var pairs = [],
@@ -591,7 +590,7 @@ if (element.tagName.toLowerCase() === 'div'){
                 ，要么是通过了setAttribute()方法设置了该属性。在IE中，所有未设
                 置过的属性的该属性值为false。当然其他浏览器不会有问题2的存在，
                 所以无需考虑(在其他浏览器，任何属性节点的specified值始终是(
-                true)    
+                true)
             */
             if(element.attributes[i].specified){
                 pairs.push(attrName + '=\"' + attrValue + '\"');
@@ -621,13 +620,13 @@ if (element.tagName.toLowerCase() === 'div'){
     在IE7及更早版本中，可以使用这个方法来避开动态创建元素的某些问题：
 
     * 不能设置动态创建的<iframe\>元素的name 特性。
-    
+
     * 不能通过表单的reset()方法重设动态创建的<input\>元素
-    
+
     * 动态创建的type 特性值为"reset"的<buttou\>元素重设不了表单。
-   
+
     * 动态创建的一批name 相同的单选按钮彼此毫无关系。name值相同的一组单选按钮本来应该用于表示同一选项的不同值，但动态创建的一批这种单选按钮之间却没有这种关系。
-    
+
     ```javascript
     //上述问题都可以通过createElement()中指定完整的HTML标签来解决
     if(client.browser.ie && client.browser.ie <= 7){//其余的浏览器不支持
@@ -640,7 +639,7 @@ if (element.tagName.toLowerCase() === 'div'){
 
         //创建button 元素
        var button = document.createElement('<button type=\"reset\"></button>');
-       
+
        //创建单选按钮
        var radio1 = document.createElement('<input type=\"radio\" name=\"choice
        \" '＋'value=\"1\">');
@@ -698,7 +697,7 @@ if (element.tagName.toLowerCase() === 'div'){
         }
     }
     ```
-   
+
     如果想通过特定的标签名来取得子节点，可以使用`getElementsByTagName()`
 
     ```javascript
@@ -769,11 +768,11 @@ div.firstChild.nodeText = 'Some <strong>other</strong> message';
     element.appendChild(textNode);
 
     //添加到文档树
-    document.body.appendChild(element);    
+    document.body.appendChild(element);
     ```
 
 2. 规范化文本节点
-    
+
     **normalize()**
 
     DOM文档中存在相邻的同胞文本节点很容易导致混乱，因为分不清哪个文本节点表示哪个字符串。另外，DOM文档中出现相邻文本节点的情况也不在少数，于是就催生了一个能将相邻文本节点合并的方法。在一个包含两个或者多个文本节点的父元素上调用`normalize()`方法，则会将所有文本节点合并成一个节点。
@@ -939,7 +938,7 @@ ul.appendChild(fragment);
 #### 动态脚本
 
 1. 插入外部文件
-    
+
     动态加载的外部JavaScript文件能够立即运行
 
     ```javascript
@@ -976,7 +975,7 @@ ul.appendChild(fragment);
 #### 动态样式
 
 1. <link\>引入外部文件
-    
+
     必须将<link\>元素添加到<head\>而不是<body\>元素，才能保证在所有浏览器中的行为一致。
 
     ```javascript

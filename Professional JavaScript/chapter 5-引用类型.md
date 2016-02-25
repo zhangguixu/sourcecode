@@ -9,14 +9,14 @@
 
 生成实例
 
-	1. new Object() 
+	1. new Object()
 
 	2. {}（对象字面量法）
 
 属性访问：点表示法 和 方括号
 
 ```javascript
-	person.name 
+	person.name
 	person['name']
 ```
 
@@ -30,13 +30,13 @@
 	2. 大小可以动态调整
 
 创建实例：
-	
-	1. new Array() 
+
+	1. new Array()
 
 	2. [] 对象字面量
 
 #### length
-	
+
 不是只读的，通过设置这个属性，可以从数组的末尾移除项或向数组中添加新项
 
 ```javascript
@@ -74,7 +74,7 @@
 
 	解决方法：鸭式辨型（duck typing），kangax方法
 
-#### 转换方法 
+#### 转换方法
 
 toLocaleString()
 
@@ -100,19 +100,18 @@ join()
 	a.join('|'); //1|2|3
 ```
 
-#### 栈方法 
+#### 栈方法
 
 ECMAScript数组提供了一种让数组的行为类似于栈（LIFO,Last-In-First-Out）数据结构的方法。
 
 push()
-	
+
 	将参数逐个添加到数组末尾，返回修改后数组的长度
 
 pop()
-	
+
 	从数组末尾移除最后一项，减少数组的length值
 
-				
 ```javascript
 	var a = [];
 	var count = a.push(1,2,3);
@@ -132,15 +131,15 @@ shift()
 	移除数组中的第一项，并返回该项，同时length减1
 
 push()
-	
+
 	将参数逐个添加到数组末尾，返回修改后数组的长度
 
 unshift()
-	
+
 	能在数组前端添加任意项，返回数组的长度
 
 pop()
-	
+
 	从数组末尾移除最后一项，减少数组的length值
 
 ```javascript
@@ -166,7 +165,7 @@ pop()
 #### 重排序方法
 
 reverse()
-	
+
 	反转数组项的顺序
 
 ```javascript
@@ -214,7 +213,7 @@ sort()
 #### 操作方法
 
 concat()
-	
+
 	基于当前数组中的所有项创建一个新数组，具体来说，这个方法会先创建当前数组的
 	一个副本，然后将接收到的参数添加到这个副本的末尾，最后返回新构建的数组，在
 	没有参数的情况下，只是复制当前数组并返回副本
@@ -227,7 +226,7 @@ concat()
 ```
 
 slice()
-	
+
 	基于当前数组中的1或多个项创建一个新的数组
 
 ```javascript
@@ -272,11 +271,11 @@ splice()
 #### 位置方法【ECMAScript5】
 
 indexOf()
-	
+
 	从数组的开头开始向后查找
 
 lastIndexOf()
-	
+
 	从数组的末尾开始向前查找
 
 *都返回要查找的项在数组中的位置，或者没找到时返回-1，查找的项必须严格相等(===)*
@@ -290,23 +289,23 @@ lastIndexOf()
 #### 迭代方法【ECMAScript5】
 
 every()
-	
+
 	对数组中的每一项运行给定函数，如果该函数对每一项都返回true，则返回true
 
 filter()
-	
+
 	对于数组中的每一项运行给定函数，返回该函数会返回true的项组成的数组
 
 forEach()
-	
+
 	对数组中的每一项运行给定函数，这个方法没有返回值
 
 map()
-	
+
 	对数组中的每一项运行给定函数，返回每次函数调用结果组成的数组
 
 some()
-	
+
 	对数组中的每一项运行给定函数，如果该函数对任意一项返回true，则返回true
 
 ```javascript
@@ -344,11 +343,11 @@ some()
 3. 第一次迭代发生在数组的第二项上。
 
 reduce()
-	
+
 	从数组的第一项开始，逐个遍历到最后
 
 reduceRight()
-	
+
 	从数组的最后一项开始，向前遍历到第一项
 
 ```javascript
@@ -375,15 +374,15 @@ Date类型使用自UTC（国际协调时间）
 #### 属性
 
 Date.parse()
-	
+
 	参数：月/日/年（6/13/2013）
 
 Date.UTC()
-	
+
 	返回表示日期的毫秒数
 
 Date.now()【ECMAScript5】
-	
+
 	返回表示调用这个方法时的日期和时间的毫秒数
 
 ```javascript
@@ -403,7 +402,7 @@ Date.now()【ECMAScript5】
 2. toLocaleString()
 3. valueOf()
 	`返回日期的毫秒表示，可以用比较操作符来比较日期值`
-			
+
 ```javascript
 	var d1 = new Date(2016,0,1);
 	var d2 = new Date(2016,1,1);
@@ -413,19 +412,19 @@ Date.now()【ECMAScript5】
 #### 日期格式化方法
 
 toDateString()
-	
+
 	星期几、月、日、年
 
 toTimeString()
-	
+
 	时、分、秒、时区
 
 toLocaleDateString()
-	
+
 	特定地区的格式 星期几、月、日、年
 
 toLocaleTimeString()
-	
+
 	特定地区的格式 时、分、秒、时区
 
 toUTCString()
@@ -441,7 +440,7 @@ toUTCString()
 ECMAScript通过RegExp类型来支持正则表达式
 
 ```javascript
-var expression = / pattern / flags ; 
+var expression = / pattern / flags;
 ```
 
 #### flags
@@ -471,23 +470,23 @@ var expression = / pattern / flags ;
 #### RegExp实例属性
 
 global
-	
+
 	布尔值，是否设置g标志
 
 ignoreCase
-	
+
 	布尔值，是否设置i标志
 
 multiline
-	
+
 	布尔值，是否设置m标志
 
 lastIndex
-	
+
 	整数，表示开始搜索下一个匹配的字符位置，从0算起
 
 source
-	
+
 	正则表达式的字符串表示
 
 ```javascript
@@ -502,7 +501,7 @@ source
 #### RegExp实例方法
 
 exec()
-	
+
 	专门为捕获组而设计的，只接收要应用模式的字符串，然后返回包含第一个匹配项信
 	息的数组，返回的数组是Array的实例，同时包含两个额外的属性：
 		1. index（匹配项在字符串中的位置）
@@ -522,7 +521,7 @@ exec()
 ```
 
 test()
-	
+
 	接收一个字符串参数，在该模式有参数匹配的情况下返回true，否则返回false
 
 ```javascript
@@ -559,7 +558,7 @@ test()
 #### 模式的局限性
 
 不支持的特性
-	
+
 	1. 匹配字符串开始和结尾的\A 和\Z 锚
 	2. 向后查找（lookbehind）
 	3. 并集和交集类
@@ -584,7 +583,7 @@ test()
 
 #### 函数的定义（3种）
 
-函数声明
+1. 函数声明
 
 ```javascript
 	function sum(n1,n2){
@@ -592,7 +591,7 @@ test()
 	}
 ```
 
-函数表达式定义
+2. 函数表达式定义
 
 ```javascript
 	var sum = function(n1,n2){
@@ -600,9 +599,10 @@ test()
 	};
 ```
 
-通过Function构造函数
+3. 通过Function构造函数
+
 *不建议，一是会导致解析两次代码，二是表达上不灵活*
-			
+
 ```javascript
 	var sum = new Function('n1','n2','return n1+n2');
 ```
@@ -662,7 +662,7 @@ this
 	this对象引用的就是window
 
 caller
-	
+
 	保存着调用当前函数的引用，如果在全局作用域中调用当前函数，它的值为null
 
 ```javascript
@@ -681,7 +681,7 @@ caller
 ECMAScript中的函数是对象，因此函数也有属性和方法
 
 length
-	
+
 	表示函数希望接收的命名参数的个数
 
 prototype
@@ -689,13 +689,14 @@ prototype
 	对于ECMAScript中的引用类型而言，prototype是保存它们所有实例方法的真正所在
 
 ***
+
 call() & apply()
-	
+
 	用途是在特定的作用域中调用函数，实际上等于设置函数体内的this对象的值，使用
 	这两种方法来扩展作用域的最大好处就是对象不需要与方法有任何耦合关系。
 
 bind()【ECMAScript5】
-	
+
 	创建一个函数的实例，其this值会被绑定到传给bind()函数的值
 
 ```javascript
@@ -736,7 +737,7 @@ bind()【ECMAScript5】
 #### Boolean类型
 
 ***永远不要使用***
-			
+
 ```javascript
 	var falseObject = new Boolean(false);
 	var result = falseObject && true;
@@ -756,7 +757,7 @@ toString()
 	可以传递一个表示基数的参数，返回几进制数值的字符串形式
 
 toFixed()
-	
+
 	按照指定的小数位返回字符串表示,会进行自动舍入
 
 ```javascript
@@ -765,16 +766,16 @@ toFixed()
 ```
 
 toExponential()
-	
+
 	返回以指数表示法(e表示法)
-				
+
 ```javascript
 	var n = 10;
 	n.toExponential(1);//1.0e+1
 ```
 
 toPrecision()
-	
+
 	可以通过参数来获取最合适的格式。
 
 ```javascript
@@ -789,11 +790,11 @@ toPrecision()
 字符串的对象包装类型
 
 **length**
-	
+
 	表示字符串中包含的字符的个数
 
 **字符方法**
-	
+
 	参数：基于0的字符位置
 
 charAt()
@@ -813,7 +814,7 @@ charCodeAt()
 **字符串操作方法**
 
 concat(string)
-	
+
 	用于将一或多个字符串拼接起来
 
 ```javascript
@@ -830,15 +831,15 @@ concat(string)
 	当参数是负数时：
 
 slice(start,end?)
-	
+
 	将传入的负值与字符串的长度相加
 
 substr(start,end?)
-	
+
 	将负的第一参数加上字符串的长度，负的第二个参数转换为0
 
 substring(start,end?)
-	
+
 	将所有负值参数都转换为0
 
 
@@ -857,11 +858,11 @@ substring(start,end?)
 从一个字符串中搜索给定的子字符串，返回子字符串的位置
 
 indexOf()
-	
+
 	从头向后搜索
 
 lastIndexOf()
-	
+
 	从后向前搜索
 
 ```javascript
@@ -901,7 +902,7 @@ toLocaleUpperCase()
 **字符串的模式匹配方法**
 
 match(RegExp对象/正则表达式)
-	
+
 	本质上与调用RegExp的exec()方法相同
 
 ```javascript
@@ -914,7 +915,7 @@ match(RegExp对象/正则表达式)
 ```
 
 search()
-	
+
 	返回字符串中第一个匹配项的索引，如果没有，则返回-1
 
 ```javascript
@@ -935,7 +936,7 @@ replace(RegExp/字符串,字符串/函数)
 	result = text.replace(/at/g,'ond');
 	result;//'cond,bond,sond,fond'
 ```
-	
+
 	如果第二个参数是字符串，还可以使用一些特殊的字符序列，将正则表达式操作得到
 	的值插入到结果字符中
 		1. $$ $
@@ -974,7 +975,7 @@ replace(RegExp/字符串,字符串/函数)
 ```
 
 split(字符串或RegExp,数组大小)
-	
+
 	基于指定的分隔符将一个字符串分割成多个子字符串，将结果放在一个数组中
 
 ```javascript
@@ -1025,17 +1026,17 @@ split(字符串或RegExp,数组大小)
 **parseFloat()**
 
 **URI编码方法**
-	
+
 	有效的URI中不能包含某些字符，而这两个URI编码方法就可以对URI进行编码，它们
 	用特殊的UTF-8编码替换所有无效的字符，从而让浏览器能够接受和理解
 
 encodeURI() & decodeURI()
-	
+
 	对整个URI进行编码\解码，但不会对属于URI的特殊字符进行编码，如冒号，正斜杠
 	，问号，井号
 
 encodeURIComponent() & decodeURIComponent()
-	
+
 	主要用于对URI的某一段，会对它发现的任何非标准字符进行编码\解码
 
 ```javascript
@@ -1078,7 +1079,7 @@ window对象
 ![Math 对象的属性](./img/Properties-of-Math.PNG)
 
 **min() & max()**
-	
+
 	确定一组数值中的最小值和最大值
 
 ```javascript
@@ -1089,10 +1090,10 @@ window对象
 **舍入方法**
 
 Math.ceil()
-	
+
 	将数值向上舍入为最接近的整数
 Math.floor()
-	
+
 	将数值向下舍入为最接近的整数
 Math.round()
 

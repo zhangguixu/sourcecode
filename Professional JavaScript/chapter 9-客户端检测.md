@@ -101,17 +101,17 @@ var hasEnumShadowsQuirk = function(){
     此后，Netscape Communications公司介入浏览器开发领域后，遂将自己产品的代号定名为Mozilla（MosaicKiller 的简写，意即 Mosaic 杀手）。
 
     该公司第一个公开发行版，Netscape Navigator 2 的用户代理字符串具有如下格式。
-   
+
     `Mozilla/版本号 [语言] （平台；加密类型）`
 
 3. Netscape Navigator 3 和Internet Explorer 3
-    
+
     1996 年，Netscape Navigator 3 发布，随即超越Mosaic 成为当时最流行的Web 浏览器。而用户代理字符串只作了一些小的改变：
-   
+
     `Mozilla/版本号 （平台；加密类型[;操作系统或CPU说明]）`
 
     Netscape Navigator 3 发布后不久，微软也发布了其第一款赢得用户广泛认可的Web 浏览器，即Internet Explorer 3。由于Netscape 浏览器在当时占绝对市场份额，许多服务器在提供网页之前都要专门检测该浏览器。如果用户通过IE打不开相关网页，那么这个新生的浏览器很可能就会夭折。于是，微软决定将IE的用户代理字符串修改成兼容Netscape 的形式，结果如下：
-    
+
     `Mozilla/2.0 (compatible; MSIE 版本号; 操作系统)`
 
 4. Netscape Communicator 4 和IE4～IE8
@@ -143,7 +143,7 @@ var hasEnumShadowsQuirk = function(){
     `Mozilla/Mozilla 版本号 (平台; 加密类型; 操作系统或CPU; 语言; 预先发行版本)Gecko/Gecko 版本号 应用程序或产品/应用程序或产品版本号`
 
     `Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11`
-    
+
 6. WebKit
 
     2003 年，Apple 公司宣布要发布自己的Web浏览器，名字定为Safari。Safari的呈现引擎叫WebKit，是Linux平台中Konqueror浏览器的呈现引擎KHTML的一个分支。几年后，WebKit 独立出来成为了一个开源项目，专注于呈现引擎的开发。为了确保这款浏览器不被流行的站点拒之门外，Webkit的用户代理字符串就具备了如下格式：
@@ -205,13 +205,13 @@ var hasEnumShadowsQuirk = function(){
     Android 浏览器中的默认格式与iOS 的格式相似，没有移动版本号（但有Mobile 记号）。例如：
 
     `Mozilla/5.0 (Linux; U; Android 2.2; en-us; Nexus One Build/FRF91)AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1`
-    
+
 #### 用户代理字符串检测技术
 
 **浏览器检测脚本的思路**
 
 1. 识别呈现引擎
-    
+
     有时候，确切知道浏览器的名字和版本号，还不如确切知道它使用的是什么样的呈现引擎。因此我们编写的脚本主要检测五大呈现引擎：`IE,Gecko,Webkit,KHTML,Opera`
 
     ```javascript
@@ -238,7 +238,7 @@ var hasEnumShadowsQuirk = function(){
     ```
 
     **正确的检测引擎顺序**
-    
+
     1. 检测`Opera`，因为它可以完全模仿其他浏览器，要识别它，必须检测window.opera对象
     ```javascript
     if(window.opera){
@@ -314,7 +314,7 @@ var hasEnumShadowsQuirk = function(){
     ```
 
 2. 识别浏览器
-    
+
     有时候，只有呈现引擎还不能说明存在所需的JavaScript功能。例如Safari和Chrome都使用WebKit作为呈现引擎，但是它们的JavaScript引擎却不一样。
 
     ```javascript
@@ -463,7 +463,7 @@ var hasEnumShadowsQuirk = function(){
     ```
 
 4. 识别window操作系统
-    
+
     在Windows平台下，还可以从用户代理字符串中进一步取得具体的操作系统信息。
 
     ![Windows版本](./img/Windows版本.PNG)
@@ -498,7 +498,7 @@ var hasEnumShadowsQuirk = function(){
     }
     ```
 5. 识别移动设备
-    
+
     ```javascript
      var client = function(){
 
@@ -553,29 +553,29 @@ var hasEnumShadowsQuirk = function(){
     ```
 
     1. iPhone
-        
+
         `CPU iPhone OS 3_0 like Mac OS X`
 
     2. iPad
-        
+
         `CPU OS 3_2 like Mac OS X`
 
     3. Android
-        
+
         搜索字符串"Android"并取的紧跟其后的版本号
 
     4. nokiaN
-        
+
         检测用户代理字符串是否存在"NokiaN"
 
     5. Windows Mobile
-        
+
         `Mozilla/4.0 (compatible; MSIE 4.01; Windows CE; PPC; 240x320)`
 
 6. 识别游戏系统
-    
+
     1. Wii
-        
+
         `Opera/9.10 (Nintendo Wii;U; ; 1621; en)`
 
     2. Playstation 3

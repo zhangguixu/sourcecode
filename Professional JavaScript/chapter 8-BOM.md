@@ -24,7 +24,7 @@ window.sayAge(); //29
 ```
 
 定义全局变量与在window对象上直接定义属性有一点差别
-    
+
     全局变量不能通过delete操作符删除，而直接在window对象上定义的属性可以
 
 ```javascript
@@ -56,7 +56,7 @@ window.color;//undefined
             <frame src="" name="leftFrame">
             <frame src="" name="rightFrame">
         </frameset>
-    </frameset>     
+    </frameset>
 </html>
 ```
 
@@ -75,7 +75,7 @@ screenX & screenY
 获取浏览器窗口左边和上边的位置
 
 ```javascript
-var leftPos = (typeof window.screenLeft == 'number') ? 
+var leftPos = (typeof window.screenLeft == 'number') ?
                 window.screenLeft : window.screenX;
 var topPos = (typeof window.screenTop == 'number') ?
                 window.screenTop : window.screenY;

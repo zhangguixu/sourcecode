@@ -1,7 +1,7 @@
 #JavaScript 高级程序设计
 
 ##JavaScript 基本概念
-    
+
 ### 语法
 ***
 
@@ -10,7 +10,7 @@
 **标识符：驼峰大小写格式**
 
 **注释**
-    
+
     // 单行注释
     /*
      *多行
@@ -26,7 +26,7 @@
 *严格模式下，JavaScript的执行结果会有很大不同*
 
 **语句**
-    
+
     语句以一个分号结尾，如果省略分号，则有解析器确定语句的结尾
 
 ### 关键字和保留字
@@ -83,17 +83,18 @@ ReferenceError错误*
 ***不支持任何创建自定义类型的机制***
 
 ### 操作符
+
 ***
-    
+
 typeof操作符
-    
+
     检测给定变量的数据类型
         'undefined' --- 值未初始化 或 未定义
         'boolean'   --- 布尔值
         'number'    --- 数值
         'string'    --- 字符串
         'function'  --- 函数
-        'object'    --- 对象 null 
+        'object'    --- 对象 null
 
 ===严格相等
 
@@ -112,7 +113,7 @@ for in 语句
         for (property in expression) statement
 
 with
-    
+
     将代码的作用域设置到一个特定的对象中
             with (expression) statement
 
@@ -138,7 +139,7 @@ with
 特点
 
     1. 类数组，常常需要进行数组化
-    
+
     2. 值永远与对应命名参数的值保持同步
 
 ```javascript
@@ -175,11 +176,11 @@ with
 ###基本类型和引用类型的值
 
 基本类型
-    
+
     简单的数据段，按值访问，可以操作保存在变量中实际的值
-        
+
 引用类型
-    
+
     它的值是保存在内存中的对象，JavaScript不允许直接访问内存中的位置，也就是说
     不能直接操作对象的内存空间，在操作对象时，实际上是在操作对象而不是实际的对
     象
@@ -233,7 +234,7 @@ with
 
 基本类型：被传递的值会被复制给一个局部变量（即命名参数）
 
-```javascript   
+```javascript
     function add(num){
         num += 10;
         return num;
@@ -265,12 +266,12 @@ obj指向了新的对象，person并没有改变*
 #### 检测类型
 
 typeof
-    
+
     1. 检测number,string,boolean,undefined最佳工具
     2. 对于null和Object，都返回'object'，用处不大
 
 instanceof
-    
+
     目的是：知道某个值是什么类型的对象
         result = variable instanceof constructor
     如果变量是给定引用类型（根据原型链）的实例，那么instanceof操作符就会返回

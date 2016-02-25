@@ -26,7 +26,7 @@
         保留字
         操作符
         对象
-        
+
 
 #### 文档对象模型（DOM）
 
@@ -49,19 +49,19 @@ DOM Level 2
 *在原来DOM的基础上又扩充了*
 
 DOM 视图（DOM Views）
-    
+
     定义了跟踪不同文档（例如，应用CSS之前和之后的文档）视图的接口
 
 DOM 事件（DOM Events）
-    
+
     定义了事件和事件处理的接口
 
 DOM 样式（DOM Style）
-    
+
     定义了基于CSS为元素应用样式的接口
 
 DOM 遍历和范围（DOM Traversal and Range）：
-    
+
     定义了遍历和操作文档树的接口
 
 DOM Level 3
@@ -99,5 +99,5 @@ DOM验证（DOM Validation）
 3. Navigator:浏览器详细信息
 4. location :浏览器所加载页面的详细信息
 5. screen   :用户显示器分辨率详细信息
-6. cookies 
-7. XMLHttpRequest 和IE 的ActiveXObject 
+6. cookies
+7. XMLHttpRequest 和IE 的ActiveXObject
