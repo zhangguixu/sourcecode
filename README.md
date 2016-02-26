@@ -147,6 +147,10 @@ cookie
 
 	HTML head 头标签的总结
 
+## network
+
+	http/https、DNS
+
 ## dom
 
 DOM编程
@@ -192,3 +196,9 @@ js加载方式及加载性能优化
 ##html5
 
 	Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》读书笔记、
+
+# 杂记
+
+## blog
+
+	关于前端的思考和如何成为一名优秀的前端工程师
