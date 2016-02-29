@@ -15,6 +15,8 @@
 
 	5. call & apply
 
+	6. security（关于安全的一些常识）
+
 ##tools
 
 	存储一些便捷的插件工具的指令，来提高开发的效率
@@ -149,7 +151,7 @@ cookie
 
 ## network
 
-	http/https、DNS
+	http/https、脚本化http、DNS
 
 ## dom
 

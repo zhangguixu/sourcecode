@@ -161,6 +161,190 @@ http响应也是3个部分组成：
 
 ### Response部分
 
+| header | 说明 | 示例 |
+| :----- | :--- | :--- |
+| Accept-Ranges | 表明服务器是否支持指定范围请求及哪种类型的分段请求 | Accept-Ranges:bytes |
+| Age | 从原始服务器到代理缓存形成的估算时间（以秒计）| Age:12 |
+| Allow | 对某网络资源的有效请求行为，不允许返回405 | Allow:GET,HEAD |
+| Cache-Control | 告诉所有缓存机制是否可以缓存及哪种类型 | Cache-Control:no-cache |
+| Content-Encoding | Web服务器支持的返回内容压缩编码类型 | Content-Encoding-gzip |
+| Content-Language | 响应体的语言 | Content-Language:en,zh |
+| Content-Location | 请求资源可替代的备用的另一地址 | Content-Location:/index.htm |
+| Content-MD5 | 返回资源的MD5校验值 | Content-MD5:Q2hlY2sgSW50ZWdyaXR5IQ== |
+| Content-Type | 返回内容的MIME类型 | Content-Type:text/html;charset=utf-8 |
+| Date | 原始服务器消息发出的时间 | Date:Tue,15 Nov 2010 08:12:31 GMT |
+| ETag | 请求变量的实体标签的当前值 | ETag:"737060cd8c284d8af7ad3082f209582d" |
+| Expires | 响应过期的日期和时间 | Expires:Thu, 01 Dec 2010 16:00:00 GMT |
+| Last-Modified | 请求资源的最后修改时间 | Last-Modified: Tue, 15 Nov 2010 12:45:26 GMT |
+| location | 用来重定向接收方到非请求URL的位置来完成请求或标识新的资源 | location: http://example.com |
+| Pragma | 包括实现特定的指令，它可应用到响应链上的任何接收方 | Pragma:no-cache |
+| Proxy-Authenticae | 它指出认证方案和可应用到代理的该URL上的参数 | Proxy-Authenticate:Basic |
+| refresh | 应用于重定向或一个新的资源被创造，在5秒之后重定向 | Refresh:5;url=http://example.com |
+| Retry-After | 如果实体暂时不可取，通知客户端在指定时间之后再次尝试 | Retry-After:120 |
+| Server | Web服务器软件名称 | Server: Apache/1.3.27 (Unix) (Red-Hat/Linux) |
+| Set-Cookie | 设置Http Cookie | Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1 |
+| Trailer | 指出头域在分块传输编码的尾部存在 | Trailer:Max-Forwards |
+| Transfer-Encoding | 文件传输编码 | Transfer-Encoding:chunked |
+| Vary | 告诉下游代理是使用缓存响应还是原始服务器请求 | Vary:* |
+| Via | 告知代理客户端响应是通过哪里发送的 | Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1) |
+| Warning | 警告实体可能存在的问题 | Warning: 199 Miscellaneous warning
+| WWW-Authenticate | 表明客户端请求实体应该使用的授权方案 | WWW-Authenticate: Basic |
+
+## 页面中的HTTP
+
+*来源于《JavaScript权威指南》第18章*
+
+### JavaScript操纵HTTP的方法
+
+1. 用脚本设置window对象的location属性
+
+2. 调用表单对象的submit()方法
+
+3. Ajax技术的实现
+
+### Ajax
+
+#### 概念
+
+描述了一种主要使用脚本操作HTTP的Web应用架构。
+
+#### 特点
+
+使用脚本操纵HTTP和Web服务器进行数据交换，不会导致页面重载。
+
+#### Comet
+
+Comet是和使用脚本操纵HTTP的Web应用架构相关的术语。在Comet中，Web服务器发起通信并异步发送消息到客户端。如果客户端要响应服务器发送的消息，则会使用Ajax技术发送或请求数据。
+
+在Ajax中，客户端从服务器端`拉`数据；在Comet中，服务器向客户端`推`数据。
+
+#### 实现Ajax传输的方式
+
+1. <img\>的src属性
+
+    这个元素无法实现完整的Ajax传输协议，因为`数据交换是单向`的，客户端发送数据到服务器，但服务器的响应一直是张图片导致客户端无法轻易从中提取信息。
+
+2. <iframe\>的src属性
+
+    为了把这个元素作为Ajax的传输协议来使用，脚本首先要把发送给Web服务器的信息编码到URL中，然后设置这个元素的src为URL。服务器能创建一个包含响应内容的HTML文档，并把它返回给Web浏览器，并且在<iframe\>中显示。
+
+    此外，<iframe\>还需对用户不可见。
+
+    脚本能通过遍历<iframe\>的文档对象来读取服务器端的响应，这种访问受限于`同源策略`。
+
+3. &lt;script&gt;的src属性（JSONP）
+
+    &lt;script&gt;的src属性能设置URL并发起HTTP GET请求。它可以`跨域通信而不受限于同源策略`。使用基于&lt;script&gt;的Ajax传输协议时，服务器的响应采用JSON编码的数据格式，当执行脚本时，JavaScript解析器能自动将其"解码"。
+
+    由于使用JSON数据格式，因此这种Ajax传输协议又叫`JSONP`。
+
+4. XMLHttpRequest对象
+
+    XMLHttpRequest对象定义了用脚本操纵HTTP的API，包含GET和POST请求的能力，异步使用，能用于HTTP和HTTPS请求，能获取任何类型的文本文档。
+
+#### XMLHttpRequest
+
+**实例化**
+
+```javascript
+var request = new XMLHttpRequest(); //IE7+和其他浏览器
+```
+
+**HTTP请求（4个部分）**
+
+1. HTTP请求方法或"动作"
+
+    * GET：当请求对服务器没有任何副作用以及当服务器的响应是可缓存的。
+
+    * POST：常用于HTML表单，在请求主体中包含额外的数据，且这些数据常存储到服务器上的数据库中（副作用）
+
+    * HEAD：得到广泛支持
+
+2. 正在请求的URL
+
+    如果指定绝对URL，协议、主机和端口通常必须匹配所在的文档对应的内容，跨域的请求通常会报错（2级的XmlHttpRequest规范允许）。
+
+
+以上的调用`open()`来设置
+
+```javascript
+request.open('GET', //开始一个HTTP GET请求
+            'data.csv'); //URL的内容
+```
+
+3. 可选的请求头集合
+
+    调用`setRequestHeader()`来设置请求头，当对相同的头调用多次的setRequestHeader()，新值不会取代之前指定的值，相反，HTTP请求将包含这个头的多个副本或这个头指定多个值。
+
+    此外，XMLHttpRequest将自动添加某些头而防止伪造它们，因此无法自行指定这些头。
+
+    `
+        Accept-Charset    Content-Transfer-Encoding TE
+        Accept-Encoding   Date                      Trailer
+        Connection        Expect                    Transfer-Encoding
+        Content-Length    Host                      Upgrade
+        Cookie            Keep-Alive                User-Agent
+        Cookie2           Referer                   Via
+    `
+
+    常见的，在POST请求中，需要设置请求主题的MIME类型
+
+    ```javascript
+    request.setRequestHeader('Content-Type','text/plain');
+    ```
+
+4. 可选的请求主体，并向服务器发送请求
+
+    ```javascript
+    request.send(null);//GET 方法
+    request.send(data); //POST 方法，发送一些表单数据之类的
+    ```
+
+**HTTP响应（3个部分）**
+
+1. 一个数字和文字组成的状态码，用来显示请求的成功和失败
+
+    `status`和`statusText`来获取状态码
+
+2. 一个响应头集合
+
+    `getResponseHeader()`和`getAllResponseHeaders()`能查询响应头。XmlHttpRequest会自动处理cookie：它会在getAllResponseHeaders()头返回中过滤掉cookie头，而如果给getResponseHeader()传递"Set-Cookie"和"Set-Cookie2"则返回null。
+
+3. 响应主体
+
+    从`responseText`属性中得到响应主体的文本形式。
+
+**异步使用**
+
+发送请求后，即调用send()，为了响应准备就绪时得到通知，必须监听XMLHttpRequest对象上的`readystatechange`事件。为了理解这个事件类型，必须了解一下readyState属性。
+
+readyState是一个整数，指定了HTTP请求的状态。
+
+| 常量（旧版本IE不支持） | 值 | 含义 |
+| :--------------------- | :--| :--- |
+| UNSET | 0 | open()尚未调用 |
+| OPENED | 1 | open()已调用 |
+| HEADERS_RECEIVED | 2 | 接收到头信息 |
+| LOADING | 3 | 接收到响应体 |
+| DONE | 4 | 响应完成 |
+
+```javascript
+//发出一个HTTP GET请求以获得指定URL的内容的完整例子
+function getText(url,callback){
+    var request = new XMLHttpRequest();
+    request.open('GET',url);
+    request.readystatechange = function(){
+        if (request.readyState === 4 && request.status === 200){
+            var type = request.getResponseType('Content-Type');
+            if(type.match(/^text/)){
+                callback(request.responseText);
+            }
+        }
+    }
+    request.send(null);
+}
+```
+
 ## HTTPS基本知识
 
 ### 概念
@@ -192,3 +376,4 @@ HTTPS(Hypertext Transfer Protocol over Secure Socket Layer)，基于SSL的HTTP�
 3. http连接简单，无状态；https是有ssl+http协议构建的可进行加密传输、身份认证的网络协议
 
 4. 端口不同：http是80；https是443
+
