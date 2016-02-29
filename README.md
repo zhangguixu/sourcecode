@@ -183,7 +183,13 @@ HTML head 头标签的总结
 
 ## dom
 
-###DOM编程注意点
+### image
+
+1. 预加载
+
+2. src属性的特点
+
+###operation（DOM操作注意点）
 
 1. 重绘和重排版
 
