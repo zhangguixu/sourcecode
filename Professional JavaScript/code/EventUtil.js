@@ -23,6 +23,9 @@ var EventUtil = {
     getTarget : function(event){
         return event.target || event.srcElement;
     },
+    getRelatedTarget : function(event){
+        return event.relatedTarget || event.toElement || event.fromElement ;
+    }
     preventDefault : function(event){
         if(event.preventDefault){
             event.preventDefault();

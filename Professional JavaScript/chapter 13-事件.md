@@ -644,7 +644,7 @@ var isSupported = document.implementation.hasFeature('MouseEvents','2.0');
 var isSupported = document.implementation.hasFeature('MouseEvent','3.0');
 ```
 
-**客户区坐标位置 clientX clientY**
+**1. 客户区坐标位置 clientX clientY**
 
 鼠标事件都是发生在浏览器视口中的特定位置上，这个位置保存在事件对象的`clientX`和`clientY`的属性中。所有浏览器都支持这两个属性。
 
@@ -659,6 +659,102 @@ EventUtil.addHandler(div,'click',function(event){
 ```
 
 *这些值中不包括页面滚动的距离，因此这个位置并不表示鼠标在页面上的位置*
+
+**2. 页面坐标位置 pageX pageY**
+
+`pageX`和`pageY`能表明事件是在页面中的什么位置发生的，这两个值组成的坐标是从页面本身而非视口的左边和顶边计算的。
+
+IE8及更早版本不支持事件对象上的页面坐标，不过可以使用客户区坐标和滚动信息计算出来。
+
+```javascript
+var div = document.getElementById('myDiv');
+EventUtil.addHandler(div,'click',function(event){
+    event = EventUtil.getEvent(event);
+    var pageX = event.pageX,
+        pageY = event.pageY;
+
+    if(pageX === undefined){
+        pageX = event.clientX + (document.body.scrollLfet ||
+         document.documentElement.scrollLeft);
+    }
+
+    if(pageY === undefined){
+        pageY = event.clientY + (document.body.scrollTop ||
+         document.documentElement.scrollTop);
+    }
+
+    alert('Page coordiantes: ' + pageX + ',' + pageY);
+});
+```
+
+**3. 屏幕坐标位置 screenX screenY**
+
+`screenX`和`screenY`可以确定鼠标事件发生时鼠标指针相对于整个屏幕的坐标位置。
+
+![屏幕坐标位置](./img/屏幕坐标位置.png)
+
+```javascript
+var div = document.getElementById('myDiv');
+EventUtil.addHandler(div,'click',function(event){
+    event = EventUtil.getEvent(event);
+    alert('Screen coordinates: ' + event.screenX + ',' + event.screenY);
+});
+```
+
+**4. 修改键**
+
+有时，按下鼠标键盘上的某些键的状态也可以影响所要采取的操作，这些修改键就是`Shift,Ctrl,Alt和Meta`，它们经常被用来修改鼠标事件的行为。DOM为此规定了4个属性。
+
+```javascript
+var div = document.getElementById('myDiv');
+EventUtil.addHandler(div,'click',function(event){
+    event = EventUtil.getEvent(event);
+    var keys = [];
+
+    if(event.shiftKey){
+        keys.push('shift');
+    }
+
+    if(event.ctrlKey){
+        keys.push('ctrl');
+    }
+
+    if(event.altKey){
+        keys.push('alt');
+    }
+
+    //IE8及之前版本不支持
+    if(event.metaKey){
+        keys.push('meta');
+    }
+
+    alert('keys '+keys.join(','));
+});
+```
+
+**5. 相关元素 relatedTarget**
+
+在发生mouseover和mouseout事件时，还会涉及更多的元素。对于mouseover事件而言，事件的主目标是获得光标的元素，而`相关元素`就是那个失去光标的元素。类似地，对mouseout事件而言，事件的主目标是失去光标的元素，而相关元素则是获得光标的元素。
+
+DOM通过event对象的`relatedTarget`属性提供了相关元素的信息。这个属性只对于mouseover和mouseout事件才包含值。IE8及之前版本提供了保存这同样信息的不同属性。在mouseover事件触发时，IE的`fromElement`属性中保存了相关元素；在mouseout事件触发时，IE的toElement属性中保存着相关元素。
+
+```javascript
+var EventUtil = {
+    //省略了其他代码
+
+    getRelatedTarget : function(event){
+        return event.relatedTarget || event.toElement || event.fromElement ;
+    },
+
+    //省略其他代码
+}
+```
+
+
+
+
+
+
 
 
 

@@ -183,6 +183,8 @@ HTML head 头标签的总结
 
 ## dom
 
+### dom操作的性能优化
+
 ### image
 
 1. 预加载
@@ -233,6 +235,10 @@ Nicholas.C.Zakas《编写可维护的JavaScript》读书笔记
 ##html5
 
 Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》读书笔记、
+
+## high performance javascript
+
+Nicholas.C.Zakas 《高性能JavaScript编程》
 
 ***
 
