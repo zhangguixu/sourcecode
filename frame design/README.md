@@ -25,6 +25,10 @@ JavaScript 框架设计
 
 >dojo开始以JSONP的方法设计它的每个模块的结构，以script节点为主体加载它的模块，这个就是目前主流的著名的require加载器
 
+## 动画引擎
+
+> 基于JavaScript的动画引擎，使用JS的时间处理的API对元素的CSS样式进行控制，达到动火的效果；基于CSS3的transition的动画引擎，利用transition实现动画。
+
 
 
 

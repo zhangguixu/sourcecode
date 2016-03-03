@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Bounce Example</title>
+	<style>
+		#taxiway{
+			width:800px;
+			height:100px;
+			background: #E8E8FF;
+			position: relative;
+		}
+		#move{
+			position: absolute;
+			left:0px;
+			width: 100px;
+			height: 100px;
+			background: #a9ea00;
+		}
+	</style>
+</head>
+<body>
+	<div id="taxiway">
+		<div id="move"></div>
+	</div>
+	<script>
+	window.onload = function(){
+		var el = document.getElementById('move'),
+			parent = document.getElementById('taxiway');
+
+		var distance = parent.offsetWidth - el.offsetWidth,//总的移动距离
+			begin = parseFloat(window.getComputedStyle(el,null).left), //开始位置
+			end = begin + distance,//结束位置
+			fps = 30,//刷新率
+			interval = 1000 / fps,//每隔多少ms刷新一次
+			duration = 2000,//时长
+			times = duration / 1000 * fps,//一共刷新多少次
+			step = distance / times, //每次移动的距离
+			timer = null; //定时器id
+
+		el.onclick = function(){
+			clearInterval(timer);
+			var beginTime = new Date;
+			timer = setInterval(function(){
+				var t = new Date - beginTime;
+				if(t >= duration){
+					el.style.left = end + 'px';
+					clearInterval(timer);
+					alert(t);
+				} else {
+					el.style.left = begin + bounce(per) * distance + 'px';
+				}
+			}, interval);
+		}
+
+	}
+	</script>
+</body>
+</html>

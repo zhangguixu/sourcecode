@@ -37,13 +37,13 @@ JavaScript存在两套类型系统，一套是基本数据类型，另一套是�
 
 *JavaScript自带的两套识别机制非常“不靠谱”*
 
-	1. 自带的坑 typeof null //object
+1. 自带的坑 typeof null //object
 
-	2. document和window的怪异实现，如typeof documents.childNodes //functions,
+2. document和window的怪异实现，如typeof documents.childNodes //functions,
 
-	3. 跨文档，instanceof失效，在best practice/compare中有详细提到
+3. 跨文档，instanceof失效，在best practice/compare中有详细提到
 
-	4. IE下的种种，在IE下，typeof还会返回unknown的情况
+4. IE下的种种，在IE下，typeof还会返回unknown的情况
 	      typeof window.ActiveXObject
 
 >判定类型中出现了isXXX系列，但是有个问题就是isXXX系列会不断膨胀，而且似乎很难满足用户的全部需求。因此，jQuery框架就实现了最常用的isFunction，isArray，isPlainObject则是用来判定是否为纯净的JavaScript对象，制造它的最初目的是用于深拷贝，避开像window那样自己引用自己的对象，isEmptyObject是用于数据缓存系统，当此对象为空时，就可以删除它
@@ -60,6 +60,6 @@ JavaScript存在两套类型系统，一套是基本数据类型，另一套是�
 
 **具体的策略**
 
-	1）对于支持DOMContentLoaded事件的使用DOMContentLoaded事件
+1. 对于支持DOMContentLoaded事件的使用DOMContentLoaded事件
 
-	2）旧版本IE使用Diego Perini发现的著名hack
+2. 旧版本IE使用Diego Perini发现的著名hack

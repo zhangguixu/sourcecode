@@ -216,6 +216,7 @@ HTML head 头标签的总结
 
 js加载方式及加载性能优化
 
+
 ***
 
 # 书籍专题笔记
@@ -246,6 +247,12 @@ Nicholas.C.Zakas 《高性能JavaScript编程》
 
 ## blog
 
-1. font-end-developer
+### thought
 
-	关于前端的思考和如何成为一名优秀的前端工程师
+1. 如何成为一名优秀的前端工程师
+
+### skill
+
+1. test前端面试题的讨论
+
+2. JavaScript作用域和this关键字
