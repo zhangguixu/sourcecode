@@ -115,6 +115,49 @@ el.onclick = function(){
 
 *jQuery是一个参数的风格，其实是当前时间减去动画开始时间除以总时间的比值，一个0到1的小数，它用于乘以总变化量，然后加上起始值。*
 
+## API设计
+
+### JavaScript的实现方式
+
+1. jQuery的animate
+
+    ```javascript
+    .animate( properties [, duration] [, easing] [, complete] )
+
+    .animate( properties, options )
+    ```
+
+2. Queue
+
+    由于使用纯JavaScript的方式，需要一个queue，目的是让作用于同一个元素的动画进行排队，先处理完这个再处理后一个。避免同时运行于浏览器中的定时器过多。
+
+### CSS3的实现方式
+
+```css
+.animate {
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+    from {
+        left: 0%;
+        background: white;
+    }
+    to {
+        left: 200px;
+        background: red;
+    }
+}
+```
+
+## 基于JavaScript的动画引擎
+
+
+
+
 
 
 

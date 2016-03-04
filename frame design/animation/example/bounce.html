@@ -38,15 +38,26 @@
 			step = distance / times, //每次移动的距离
 			timer = null; //定时器id
 
+		var bounce = function(per){
+			if(per < (1 / 2.75)){
+				return (7.5625 * per * per);
+			} else if (per < (2 / 2.75)){
+				return (7.5625 * (per -= (1.5 / 2.75)) * per + 0.75);
+			} else if (per < (2.5 / 2.75)){
+				return (7.5625 * (per -= (2.25 / 2.75))* per + 0.9375);
+			} else {
+				return (7.5625 * (per -= (2.625 / 2.75)) * per + 0.984375);
+			}
+		};
+
 		el.onclick = function(){
 			clearInterval(timer);
 			var beginTime = new Date;
 			timer = setInterval(function(){
-				var t = new Date - beginTime;
-				if(t >= duration){
+				var per = (new Date - beginTime) / duration; //进度
+				if(per >= 1){
 					el.style.left = end + 'px';
 					clearInterval(timer);
-					alert(t);
 				} else {
 					el.style.left = begin + bounce(per) * distance + 'px';
 				}
