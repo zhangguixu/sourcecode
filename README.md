@@ -253,6 +253,10 @@ Nicholas.C.Zakas 《高性能JavaScript编程》
 
 ### skill
 
-1. test前端面试题的讨论
+1. JavaScript作用域和this关键字
 
-2. JavaScript作用域和this关键字
+### test
+
+1. 7个去伪存真的JavaScript面试题
+
+2. 一道常被人轻视的前端JS面试题
