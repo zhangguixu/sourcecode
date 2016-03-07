@@ -251,12 +251,20 @@ Nicholas.C.Zakas 《高性能JavaScript编程》
 
 1. 如何成为一名优秀的前端工程师
 
+2. 前端知识架构
+
+3. 模块化规范
+
 ### skill
 
 1. JavaScript作用域和this关键字
 
-### test
+### interview
 
 1. 7个去伪存真的JavaScript面试题
 
 2. 一道常被人轻视的前端JS面试题
+
+3. Front End Developer Questions
+
+4. 前端知识点回顾
