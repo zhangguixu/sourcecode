@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>I'm thinking of a number</title>
+	<style>
+	#prompt{
+		font-size: 16px;
+	}
+	table{
+		width: 90%;
+		margin: 10px;
+		margin-left: 5%;
+	}
+	#low,#high{
+		background-color: lightgray;
+		height: 1em;
+	}
+	#mid{
+		background-color: green;
+	}
+	</style>
+</head>
+<body>
+	<h1 id="heading">I'm thinking of a number...</h1>
+
+	<!--用户猜测的数字在有效范围-->
+	<table>
+		<tr>
+			<td id="low"></td>
+			<td id="mid"></td>
+			<td id="high"></td>
+		</tr>
+	</table>
+
+	<!--用户输入区-->
+	<label  id="prompt"></label>
+	<input type="text" id="input">
+
+	<script src="history.js"></script>
+</body>
+</html>

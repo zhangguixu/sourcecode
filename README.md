@@ -3,7 +3,7 @@
 
 ## basis
 
-**基础知识**
+### 基础知识
 
 1. array(properties & prototype)
 
@@ -18,6 +18,17 @@
 6. security（关于安全的一些常识）
 
 7. page-performance（网页生成的过程及对性能的影响）
+
+### html5
+
+1. History API
+
+2. Web Worker
+
+3. File API
+
+4. WebSocket
+
 
 ##tools
 
