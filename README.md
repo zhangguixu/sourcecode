@@ -19,6 +19,8 @@
 
 7. page-performance（网页生成的过程及对性能的影响）
 
+8. head（头标签总结）
+
 ### html5
 
 1. History API
