@@ -21,6 +21,8 @@
 
 8. head（头标签总结）
 
+9. this的使用
+
 ### html5
 
 1. History API
@@ -272,7 +274,7 @@ Nicholas.C.Zakas 《高性能JavaScript编程》
 
 ### skill
 
-1. JavaScript作用域和this关键字
+
 
 ### interview
 
