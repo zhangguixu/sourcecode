@@ -91,7 +91,7 @@
 
 		},
 
-		levelOrderTraverse : function(root){ //
+		levelOrderTraverse : function(root){ //广度优先
 			var queue = [];
 
 			queue.push(root);
