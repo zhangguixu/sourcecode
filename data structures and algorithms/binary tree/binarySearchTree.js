@@ -19,6 +19,11 @@
 
 	exports.BinarySearchTree = BinarySearchTree;
 
+	var handler = function(root,handle){
+		console.log(root.value);
+		if(handle)handle(root);
+	}; //节点的处理函数
+
 	BinarySearchTree.prototype = {
 		constructor : BinarySearchTree,
 
@@ -52,19 +57,50 @@
 
 		},
 
-		inOrderPrint : function(root){ //中序遍历
+		inOrderTraverse : function(root){ //中序遍历
+			if(root === null )return;
+
+			this.inOrderTraverse(root.left);
+
+			handler(root);
+
+			this.inOrderTraverse(root.right);
+
+
+		},
+
+		preOrderTraverse : function(root){//前序遍历
 			if(root === null)return;
 
-			if(root.left){
-				this.inOrderPrint(root.left);
-			}
-			if(root){
-				console.log(root.value);
-			}
-			if(root.right){
-				this.inOrderPrint(root.right);
-			}
+			handler(root);
 
+			this.preOrderTraverse(root.left);
+
+			this.preOrderTraverse(root.right);
+
+		},
+
+		postOrderTraverse : function(root){//后序遍历
+			if(root === null)return;
+
+			this.postOrderTraverse(root.left);
+
+			this.postOrderTraverse(root.right);
+
+			handler(root);
+
+		},
+
+		levelOrderTraverse : function(root){ //
+			var queue = [];
+
+			queue.push(root);
+
+			while(root = queue.shift()){
+				handler(root);
+				if(root.left)queue.push(root.left);
+				if(root.right)queue.push(root.right);
+			}
 		},
 
 		print : function(choice){//pre in post
@@ -72,18 +108,21 @@
 
 			switch (choice) {
 				case 'pre':
-					this.preOrderPrint(this.root);
+					this.preOrderTraverse(this.root);
 					break;
 				case 'in':
-					this.inOrderPrint(this.root);
+					this.inOrderTraverse(this.root);
 					break;
 				case 'post':
-					this.postOrderPrint(this.root);
+					this.postOrderTraverse(this.root);
+					break;
+				case 'level':
+					this.levelOrderTraverse(this.root);
 					break;
 				default:
 					break;
 			}
 		}
-	}
+	};
 
 })(window);
