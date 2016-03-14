@@ -23,6 +23,8 @@
 
 9. this的使用
 
+10. event-loop(task queue,execution context stack)
+
 ### html5
 
 1. History API

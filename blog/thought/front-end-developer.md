@@ -2,7 +2,7 @@
 
 ## 为什么整个互联网行业都缺前端工程师
 
-[2016-2-25 稀土掘金 来源](http://gold.xitu.io/entry/56ceb713f3609a26db7a1676?utm_source=leopost&utm_medium=20160226&utm_campaign=weibo)
+> 来源：http://gold.xitu.io/entry/56ceb713f3609a26db7a1676?utm_source=leopost&utm_medium=20160226&utm_campaign=weibo
 
 ### 文章认为优秀的前端工程师必备的条件
 
