@@ -49,4 +49,60 @@ JavaScript的一大特点就是`单线程`。
 
 主线程从"任务队列"中读取事件，这个过程是循环不断的，所以这种运行机制又称为Event Loop（事件循环）。
 
+## 五、定时器
 
+除了放置异步任务的事件，`任务队列`还可以放置定时事件，即指定某些代码在多少时间之后执行。这叫做`定时器`功能。
+
+定时期的功能主要由`setTimeout()`和`setInterval()`这两个函数来完成。
+
+**setTimeout(fn,0)**
+
+```javascript
+console.log(1);
+setTimeout(function(){console.log(2);},0);
+console.log(3);
+```
+
+输出结果
+
+    1
+    3
+    2
+
+setTimeout(fn,0)的含义是：`指定某个任务在主线程最早可得的空闲时间执行`。它在`任务队列`的尾部添加一个事件，因此要等到同步任务和`任务队列`现有的事件都处理完了，才得到执行。
+
+**最短间隔**
+
+1. HTML5标准规定了setTimeout()的第二参数的最小值不得低于`4ms`，如果低于这个值，就会自动增加
+
+2. 老版本的浏览器都将最短间隔设为`10ms`
+
+3. 对于DOM的变动，通常不会立即执行，而是每`16ms`执行一次。
+
+*这时使用requestAnimationFrame()的效果要好于setTimeout()*
+
+## 六、Node.js的Event Loop
+
+![node-event-loop](./img/node-event-loop.png)
+
+Node.js也是单线程的Event Loop，但是它的运行机制不同于浏览器。
+
+**运行机制**
+
+1. v8引擎解析的JavaScript脚本
+
+2. 解析后的代码，调用Node API
+
+3. libuv库负责Node API的执行，它将不同的任务分配给不同的线程，形成一个Event Loop，以异步的方式将任务的执行结果返回给v8引擎
+
+4. v8引擎再将结果返回给用户
+
+**任务队列方法**
+
+1. process.nextTick
+
+    这个方法可以在当前`执行栈`的尾部，下一次Event Loop之前，触发回调函数。
+
+2. setImmediate
+
+    则是在当前`任务队列`的尾部添加事件。
