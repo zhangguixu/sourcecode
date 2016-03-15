@@ -163,8 +163,9 @@ Michael McMillan 《数据结构与算法JavaScript描述》
 
 1. JavaScript生成唯一值
 
-2. 数组去重问题
+2. 数组元素去重问题
 
+3. 函数节流
 
 
 ### interview
