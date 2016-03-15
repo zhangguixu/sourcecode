@@ -9,7 +9,7 @@
 
 2. data type transform(数据类型转换)
 
-3. function (函数知识)
+3. advanced skill（高级技巧，高级函数，防篡改对象，高级定时器）
 
 4. regular-expression 正则表达式查阅表
 
