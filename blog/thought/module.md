@@ -97,7 +97,7 @@ define(['module1','module2'],function(m1,m2){
 
 ### CMD
 
-CMD（Common Module Definition）通用模块定义，是`SeaJS`在推广过程中模块定义ide规范化产出的。
+CMD（Common Module Definition）通用模块定义，是`SeaJS`在推广过程中模块定义的规范化产出的。
 
 ### 与AMD的区别
 

@@ -333,7 +333,7 @@ readyState是一个整数，指定了HTTP请求的状态。
 function getText(url,callback){
     var request = new XMLHttpRequest();
     request.open('GET',url);
-    request.readystatechange = function(){
+    request.onreadystatechange = function(){
         if (request.readyState === 4 && request.status === 200){
             var type = request.getResponseType('Content-Type');
             if(type.match(/^text/)){
@@ -353,7 +353,7 @@ HTTPS(Hypertext Transfer Protocol over Secure Socket Layer)，基于SSL的HTTP�
 
 ### 连接过程
 
-![HTTPS连接过程](./img/HTTPS连接过程.gif)
+![HTTPS-connection](./img/HTTPS-connection.gif)
 
 1. 客户端使用https的URL访问Web服务器，要求与Web服务器建立SSL连接
 
