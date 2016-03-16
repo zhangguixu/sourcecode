@@ -46,8 +46,6 @@
 
 3. git 常用指令
 
-
-
 ##form
 
 ### validation
@@ -115,7 +113,7 @@ js加载方式及加载性能优化
 
 ***
 
-# 书籍专题笔记
+# book
 
 ##frame design
 
