@@ -25,6 +25,10 @@
 
 10. event-loop(task queue,execution context stack)
 
+11. operator操作符的优先级
+
+12. prototype-chain原型链
+
 ### html5
 
 1. History API

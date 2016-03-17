@@ -21,7 +21,7 @@
 
 ```javascript
 Number('100x');   //NaN
-parseInt('100x'); //100						   
+parseInt('100x'); //100
 ```
 
 **隐式**
@@ -65,7 +65,7 @@ foo+'100' //foo100
 ###转换为布尔型
 
 **false**
-	
+
 * 0
 * NaN
 * null
