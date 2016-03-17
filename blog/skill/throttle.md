@@ -1,7 +1,7 @@
 # JavaScript 小技巧
 
 > 来源：http://www.cnblogs.com/tugenhua0707/p/5272539.html <br>
->       http://www.alloyteam.com/2012/11/javascript-throttle/
+> &nbsp;&nbsp;&nbsp;http://www.alloyteam.com/2012/11/javascript-throttle/
 
 ## 函数节流
 
@@ -33,7 +33,7 @@ window.onresize = function(){
 }
 ```
 
-![throttle-resize](./img/throttle-resize.png)
+![throttle-resize](../img/throttle-resize.png)
 
 *简单的缩放一次就会打印多次。这并不是我们想要的效果。*
 
