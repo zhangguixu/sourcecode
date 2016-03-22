@@ -193,3 +193,56 @@ stu.save({
 console.log(stu.toJSON());
 ```
 
+### 2-2 fetch方法
+
+fetch方法的功能是从服务器端获取数据，常用于数据模型初始化或数据恢复。这个方法采用`get`方式请求服务器中的数据，当请求成功后，将调用`set`方法重置模型的`this.attributes`对象，同时，如果重置成功，调用success函数，否则直接返回。
+
+```javascript
+var student = Backbone.Model.extend({
+    initialize : function(){},
+    url : 'fetch.php'
+});
+var stu = new student;
+stu.fetch({
+    success : function(model,response){
+        //
+    },
+    error : function(err){
+        //
+    }
+});
+```
+
+
+### 2-3 destroy方法
+
+delete方法，将以DELETE请求方式向服务器发送对象的ID数据，服务器接收该数据后删除对于的数据记录，并向客户端发送删除成功的标志。
+
+由于是删除对象的数据，因此在调用destroy方法时，必须发送ID号属性，如果不存在该属性，可以通过`idAttribute`属性进行设置，否则不会发送数据请求操作。
+
+当请求服务器失败时，如果`wait`属性值设置为true，则不会触发绑定的`destroy`事件，否则将会触发绑定`destroy`事件，并且执行error函数中的代码。
+
+```javascript
+var student = Backbone.Model.extend({
+    initialize : function(){
+        //构造函数
+        this.on('destroy',function(){
+            console.log('正则调用destroy方法');
+        });
+    },
+    url : 'destroy',
+    idAttribute : 'Code'
+});
+var stu = new student({Code : '10001'});
+stu.destroy({
+    success : function (model,response){
+        if(response.code == '0'){
+            console.log('删除成功');
+        }
+    },
+    error : function(err){
+        console.log('异常');
+    },
+    wait : true
+});
+```
