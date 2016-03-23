@@ -1,8 +1,8 @@
 # Backbone
 
-## 一、初识Backbone
+## 一、Backbone概述
 
-### 1-1 Backbone的整体构成
+###  1-1 Backbone的整体构成
 
 ![overview](./img/overview.png)
 
@@ -18,61 +18,53 @@
 
 3. 事件统一管理
 
-    在视图模型中，开发者可以通过以下代码对事件进行统一管理：
-
-    ```javascript
-    events : {
-        'click #btnAdd' : 'btnAdd_Click'
-    }
-    ```
-
 4. 绑定页面模版
 
 5. 服务端无缝交互
 
-### 1-4 依赖库
-
-#### 1-4-1 加载
+### 1-4依赖库
 
 加载顺序很重要，先加载backbone的依赖的库，再加载backbone。
 
-## 二、依赖库underscore
 
-依赖库underscore是一个非常简洁、实用的JavaScript库，包含60多个独立的函数，这些函数可以在不扩展原生JavaScript对象的情况下，为代码的开发提供丰富的使用功能。
+## 二、目录
 
-### underscore的类型模块
+#### <a href="./underscore.md">1. 依赖库underscore</a>
 
-![underscore](./img/underscore.jpg)
+* underscore的API
 
-<a href="./underscore.md">详情</a>
+#### <a href="./events.md">2. Backbone.Events</a>
 
-## 三、Backbone.Events
+* API结构
 
-### API结构
+#### <a href="./model.md">3. Backbone.Model</a>
 
-![events](./img/events.jpg)
+* Backbone.Model常见操作
 
-<a href="./events.md">详情</a>
+* 同步数据到服务器
 
-## 四、Backbone.Model
+#### <a href="./collection.md">4. Backbone.Collection</a>
 
-Model在Backbone中为数据模型，是一个最基础、最根本的数据基类，用于原始数据、底层方法的封装和定义。它的结构类似于关系数据库中的映射对象，可以装载数据库中的记录信息，并通过自定义的方法，完成数据的操作之后，将数据同步到服务器中。
+* 创建集合对象
 
-<a href="./model.md">详情</a>
+* 集合对象的操作方法
 
-### 4-1 Backbone.Model常见操作
+* 与服务器的交互方法
 
-### 4-2 同步数据到服务器
+#### <a href="./view.md">5. Backbone.View</a>
 
+* 创建视图对象
 
-## 五、Backbone.Collection
+* 事件的统一管理
 
-Collection是依附于基类的另一个数据集合类，它的功能是管理和存储由Model衍生的数据集合。可以从数据库的角度来看，一个实例化后的Model对象好像表中的一条记录，而一个实例化后的Collection对象则是一张数据集合表，可以在这表中进行一系列的增加、删除、修改、查询的操作，还可以与服务器进行数据同步，批量更新和获取数据。
+* 视图中的模版
 
-<a href="./collection.md">详情</a>
+#### <a href="./router.md">6. router & history</a>
 
-### 5-1 创建集合对象
+* 浏览器导航基础
 
-### 5-2 集合对象的操作方法
+* 绑定导航地址
 
-### 5-3 与服务器的交互方法
+* router的常用方法
+
+* history的stop方法

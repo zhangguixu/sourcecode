@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo 1</title>
+</head>
+<body>
+
+	<div id="show"></div>
+
+	<script src="../lib/jquery-1.12.2.js"></script>
+	<script src="../lib/underscore.js"></script>
+	<script src="../lib/backbone.js"></script>
+
+	<script>
+		$(function(){
+			var stumodels = [{
+				Code : '1001',
+				Name : 'foo1',
+				Score : 530
+			},{
+				Code : '1002',
+				Name : 'foo2',
+				Score : 460
+			},{
+				Code : '1003',
+				Name : 'foo3',
+				Score : 660
+			},{
+				Code : '1004',
+				Name : 'foo4',
+				Score : 500
+			}];
+			var stulist = new Backbone.Collection(stumodels);
+			var stuview = Backbone.View.extend({
+				el : '#show',
+				render : function(){
+					var curlist = this.collection.models;
+					for(var i = 0; i < curlist.length; i++){
+						this.el.innerHTML += JSON.stringify(curlist[i]) 
+									+ '</br>';
+					}
+				}
+			});
+			var stuv = new stuview({collection : stulist});
+			stuv.render();
+		});
+	</script>
+</body>
+</html>
