@@ -172,6 +172,10 @@ Alex MacCaw  《JavaScript Web 富应用开发》
 
 3. 插入排序
 
+4. 归并排序
+
+5. 快速排序
+
 ## 链表
 
 ## 堆
@@ -229,3 +233,5 @@ Alex MacCaw  《JavaScript Web 富应用开发》
 9. BAT2014前端笔试面试题：HTML/CSS篇
 
 10. 2016年Web前端面试题目汇总
+
+11.BAT2014前端笔试面试题：初级JavaScript篇

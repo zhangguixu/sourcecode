@@ -107,16 +107,17 @@
 
 	sort()方法可以接收一个`比较函数`作参数，实现我们想要的排序。
 
+	`如果想第一个参数在前，那么比较函数应该返回一个负数。`
+
+
 	```javascript
-	//升序
+	/*
+		升序，怎么理解呢？
+		比如说v1=34,v2=3,34-3>0，则v1应该排在后面，
+		排列结果为 3 34，也就是升序
+	*/
 	function asc(v1,v2){
-		if(v1 > v2){
-			return 1;
-		} else if (v1 < v2){
-			return -1;
-		} else {
-			return 0;
-		}
+		return v1-v2;
 	}
 	//降序
 	function desc(v1,v2){
