@@ -160,9 +160,24 @@ Nicholas.C.Zakas 《高性能JavaScript编程》
 
 Alex MacCaw  《JavaScript Web 富应用开发》
 
-## data structures and aligorithm with JavaScript
+***
 
-Michael McMillan 《数据结构与算法JavaScript描述》
+# 数据结构 & 算法
+
+## 基础排序
+
+1. 冒泡排序
+
+2. 选择排序
+
+3. 插入排序
+
+## 链表
+
+## 堆
+
+## 二叉树
+
 
 ***
 
