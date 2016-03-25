@@ -29,6 +29,12 @@
 
 12. prototype-chain原型链
 
+13. img（web前端图片知识）
+
+14. element-position (页面坐标，元素坐标的计算)
+
+15. img 前端图片的基础知识，图片加载优化
+
 ### html5
 
 1. History API
@@ -122,7 +128,19 @@ MVC框架的学习
 
 ### basis
 
-基础css知识
+1. 盒子模型
+
+2. 层叠
+
+3. 垂直水平居中
+
+4. display属性
+
+5. css hack
+
+6. 块级/行内元素
+
+7. position属性
 
 ### css3
 
