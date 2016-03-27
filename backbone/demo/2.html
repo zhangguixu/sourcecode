@@ -16,24 +16,32 @@
 
 	<script>
 	/*
-		认识视图
+		学习事件绑定
 	*/
 	(function($){
 
 		var ListView = Backbone.View.extend({
-			el : $('body'), //绑定el
+			el : $('body'),
 
+			events : { //事件统一管理，有固定的格式
+				'click button#add' : 'addItem'
+			},
 			initialize : function(){
-				_.bindAll(this,'render'); //绑定作用域
+				_.bindAll(this,'render','addItem'); //绑定作用域
 
+				this.counter = 0;
 				this.render();
 			},
-
 			render : function(){
-				$(this.el).append('<ul><li>hello world</li></ul>');
+				$(this.el).append('<button id="add">Add List Item</button>')
+							.append('<ul></ul>');
+			},
+
+			addItem : function(){
+				this.counter++;
+				$('ul',this.el).append('<li>hello world' + this.counter + '</li>');
 			}
 		});
-
 
 		var listView = new ListView();
 

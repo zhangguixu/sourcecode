@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Backbone</title>
+</head>
+<body>
+
+	<!--插入内容-->
+
+	<script src="../lib/jquery-1.12.2.js"></script>
+	<script src="../lib/underscore.js"></script>
+	<script src="../lib/backbone.js"></script>
+
+	<!--插入脚本-->
+
+	<script>
+	/*
+		利用Model和Collection来存储数据
+	*/
+	(function($){
+
+		//Model,以key/value的形式存储
+		var Item = Backbone.Model.extend({
+			defaults : { //默认属性数据
+				part1 : 'hello',
+				part2 : 'world'
+			}
+		});
+
+
+		// Collection，是Model的集合
+		var List = Backbone.Collection.extend({
+			model : Item
+		});
+
+
+		var ListView = Backbone.View.extend({
+			el : $('body'),
+			events : { //事件统一管理，有固定的格式
+				'click button#add' : 'addItem'
+			},
+
+			initialize : function(){
+				_.bindAll(this,'render','addItem','appendItem'); //绑定作用域
+
+				//数据来源
+				this.collection = new List();
+				this.collection.on('add',this.appendItem);// 集合事件绑定
+
+				this.counter = 0;
+				this.render();
+			},
+			render : function(){
+				var self = this;
+
+				$(this.el).append('<button id="add">Add List Item</button>')
+							.append('<ul></ul>');
+
+				_(this.collection.models).each(function(item){
+					self.appendItem(item);
+				},this);
+			},
+
+			addItem : function(){
+				this.counter++;
+				//增加collection中的数据
+				var item = new Item();
+				item.set({
+					part2 : item.get('part2') + this.counter
+				});
+				this.collection.add(item); //通过'add'事件更新视图
+			},
+
+			appendItem : function(item){
+				$('ul',this.el).append('<li>' + item.get('part1') + ' '
+									   + item.get('part2') + '</li>');
+			}
+		});
+
+		var listView = new ListView();
+
+	})(jQuery);
+	</script>
+
+</body>
+</html>
