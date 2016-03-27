@@ -84,3 +84,13 @@ h1{color:red;}
 ```
 
 第二条会胜出
+
+```html
+<style>
+    .a {color:blue;}
+    .b {color:red;}
+</style>
+<p class="b a">123</p>
+```
+
+文字的颜色是：`red`，注意顺序是值`声明顺序`，而不是`使用顺序`。
