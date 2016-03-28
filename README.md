@@ -206,3 +206,4 @@ Alex MacCaw  《JavaScript Web 富应用开发》
 10. 2016年Web前端面试题目汇总
 11. BAT2014前端笔试面试题：初级JavaScript篇
 12. BAT2014前端笔试面试题：中级Javascript篇
+13. JavaScript问题集锦 #2【难度比较大】

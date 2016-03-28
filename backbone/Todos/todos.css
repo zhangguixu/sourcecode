@@ -1,0 +1,100 @@
+@charset 'utf-8'
+
+/*基本样式*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: #EEEEEE;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+
+
+h1{
+	text-align:center;
+}
+
+ul,li{
+	list-style: none;
+	padding: 0;
+}
+
+footer{
+	background: #6ABFFC;
+	width: 600px;
+	margin:0 auto;
+	padding-left:20px;
+	padding-right: 20px;
+	height:35px;
+	line-height: 35px;
+	letter-spacing: 2px;
+}
+
+/*内容区*/
+.content{
+	width: 600px;
+	margin:0 auto;
+	background: #fff;
+	padding: 20px;
+	border-top-left-radius: 0.8em;
+	border-top-right-radius: 0.8em;
+}
+
+
+#todos{
+	display: block;
+	width: 500px;
+	height:50px;
+	margin: 0 auto;
+	border-radius: 0.2em;
+	border:solid 1px #EEEEEE;
+	font-size:18px;
+	text-indent:8px;
+}
+
+#todos:focus{
+	border:solid 1px orange;
+}
+
+
+#todoList{
+	display: block;
+	width:500px;
+	margin: 20px auto;
+	font-size: 18px;
+}
+
+#todoList li{
+	height: 35px;
+	line-height: 35px
+}
+
+.checked{
+	display: inline-block;
+	width: 15px;
+	height:15px;
+}
+
+
+.allChecked{
+	display: block;
+	float: right;
+	width: 60px;
+	height:35px;
+}
+
+#chosen{
+	display: inline-block;
+	margin-top: 0;
+	vertical-align:middle;
+	padding: 0;
+	margin-right: 0;
+	width: 15px;
+	height:15px;
+}
