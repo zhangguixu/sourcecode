@@ -91,7 +91,7 @@ Selectors API Level 1的核心是两个方法：`querySelector`和`querySelector
 
 ### 元素遍历
 
-对于元素间的空格，IE9及之前的版本不会返回文本节点，而其他所有浏览器都会。这样导致了在使用childNodes和firstChild等属性时的行为不一致，为了弥补这一差异，而又同时保持DOM规范不变。Element Traversal 规范 [www.w3.org/TR/ElementTraversal/] 新定义了一组属性。    
+对于元素间的空格，IE9及之前的版本不会返回文本节点，而其他所有浏览器都会。这样导致了在使用childNodes和firstChild等属性时的行为不一致，为了弥补这一差异，而又同时保持DOM规范不变。Element Traversal 规范 [www.w3.org/TR/ElementTraversal/] 新定义了一组属性。
 
 * childElementCount：返回子元素（不包括文本节点和注释）的个数。
 

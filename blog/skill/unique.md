@@ -7,17 +7,17 @@
 使用shift()获取并删除删除数组的第一个元素，判断这个元素是否还存在于数组中，如果存在则说明这个元素的是重复的；如果不存在，进行push()操作
 
 ```javascript
-function deleteRepeatingElements(array){
-    var i,len,item;
-
-    for(i = 0, len = array.length; i < len; i++){
-        item = array.shift();
-        if(array.indexOf(item) === -1){
-            array.push(item);
+function unique(a){
+    if(Array.isArray(a)){
+        var len = a.length,item;
+        while(len--){
+            item = a.shift();
+            if(a.indexOf(item) === -1){
+                a.push(item);
+            }
         }
     }
-
-    return array;
+    return a;
 }
 ```
 
@@ -26,7 +26,7 @@ function deleteRepeatingElements(array){
 建立一个哈希表，通过对象属性查询去除重复元素
 
 ```javascript
-function deleteRepeatingElements(array){
+function unique(array){
     var hash = {},
         len = array.length,
         result = [],

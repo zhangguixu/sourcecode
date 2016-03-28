@@ -13,7 +13,7 @@ function attachEventListener(target,type,callback,capture){
 		type='on'+type;
 
 		//判断是否已经注册回调函数
-		if(typeof target[type] ==== 'function'){
+		if(typeof target[type] === 'function'){
 			oldCallBack=target[type];
 			target[type]=function(){
 				oldCallBack();
@@ -34,18 +34,23 @@ function attachEventListener(target,type,callback,capture){
 		实的环境中，显然是多余的，同一个应用环境中，其实只需要
 		检测一次即可
 */
-function addEvent(type,element,callback){
-	if(element.addEventListener){
-		addEvent = function(type,element,callback){
-			element.addEventListener(type,callback,false);
-		}
-	} else if(element.attachEvent) {
-		addEvent = function(type,element,callback){
-			element.attachEvent(type,callback,false);
-		}
-	} else {
-		addEvent = function(type,element,callback){
-			element['on' + type] = callback;
-		}
-	}
-}
+function addListener(el,type,listener){
+    if(el.addEventListener){
+        addListener = function(el,type,listener){
+            el.addEventListener(type,listener,false);
+        }
+    } else if(el.attchEvent){
+        addListener = function(el,type,listener){
+            el.attachEvent('on'+type,function(){
+                //处理attachEvent事件处理函数的作用域问题
+                listener.call(el);
+            });
+        }
+    } else {
+        addListener = function(el,type,listener){
+            el['on' + type] = listener;
+        }
+    }
+    //绑定事件，第一次才会执行
+    addEvent(el,type,listener);
+ }
