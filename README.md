@@ -6,43 +6,26 @@
 ### 基础知识
 
 1. array(properties & prototype)
-
 2. data type transform(数据类型转换)
-
 3. advanced skill（高级技巧，高级函数，防篡改对象，高级定时器）
-
 4. regular-expression 正则表达式查阅表
-
 5. call & apply
-
 6. security（关于安全的一些常识）
-
 7. page-performance（网页生成的过程及对性能的影响）
-
 8. head（头标签总结）
-
 9. this的使用
-
 10. event-loop(task queue,execution context stack)
-
 11. operator操作符的优先级
-
 12. prototype-chain原型链
-
 13. img（web前端图片知识）
-
 14. element-position (页面坐标，元素坐标的计算)
-
-15. img 前端图片的基础知识，图片加载优化
+15. img 前端图片的基础知识，图片加载优化，图片上传
 
 ### html5
 
 1. History API
-
 2. Web Worker
-
 3. File API
-
 4. WebSocket
 
 
@@ -51,9 +34,7 @@
 存储一些便捷的插件工具的指令，来提高开发的效率
 
 1. emmet
-
 2. github-markdown
-
 3. git 常用指令
 
 ##form
@@ -61,9 +42,7 @@
 ### validation
 
 1. 是否为空
-
 2. 手机号码
-
 3. 邮箱
 
 ### submit
@@ -92,13 +71,11 @@
 ### image
 
 1. 预加载
-
 2. src属性的特点
 
 ###operation（DOM操作注意点）
 
 1. 重绘和重排版
-
 2. 最小化重绘和重排版
 
 ## performance
@@ -129,17 +106,11 @@ MVC框架的学习
 ### basis
 
 1. 盒子模型
-
 2. 层叠
-
 3. 垂直水平居中
-
 4. display属性
-
 5. css hack
-
 6. 块级/行内元素
-
 7. position属性
 
 ### css3
@@ -185,13 +156,9 @@ Alex MacCaw  《JavaScript Web 富应用开发》
 ## 基础排序
 
 1. 冒泡排序
-
 2. 选择排序
-
 3. 插入排序
-
 4. 归并排序
-
 5. 快速排序
 
 ## 链表
@@ -199,7 +166,6 @@ Alex MacCaw  《JavaScript Web 富应用开发》
 ## 堆
 
 ## 二叉树
-
 
 ***
 
@@ -210,46 +176,33 @@ Alex MacCaw  《JavaScript Web 富应用开发》
 ### thought
 
 1. 如何成为一名优秀的前端工程师
-
 2. 前端知识架构
-
 3. 模块化规范
 
 ### skill
 
 1. JavaScript生成唯一值
-
 2. 数组元素去重问题
-
 3. 函数节流
-
 4. 数组反转
-
 5. DOM元素反转
-
 6. 对象转成JSON字符串
-
+7. 作用域绑定
+8. 去除标签
+9. 获得一个范围的随机数
+10. 去除字符串前后空格
 
 ### interview
 
 1. 7个去伪存真的JavaScript面试题
-
 2. 一道常被人轻视的前端JS面试题
-
 3. Front End Developer Questions
-
 4. 前端知识点回顾
-
 5. 关于for()的一个小知识点
-
 6. 被问得最多的十个JavaScript前端面试问题
-
 7. 前端面试题集锦及答案
-
 8. 2015奇虎360面试题
-
 9. BAT2014前端笔试面试题：HTML/CSS篇
-
 10. 2016年Web前端面试题目汇总
-
-11.BAT2014前端笔试面试题：初级JavaScript篇
+11. BAT2014前端笔试面试题：初级JavaScript篇
+12. BAT2014前端笔试面试题：中级Javascript篇
