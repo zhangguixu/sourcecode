@@ -72,7 +72,19 @@ footer{
 
 #todoList li{
 	height: 35px;
-	line-height: 35px
+	line-height: 35px;
+	border-bottom:dashed 1px #EEEEEE;
+}
+
+.delete{
+	float :right;
+	width: 35px;
+	height:35px;
+	background: url(delete.png) no-repeat center;
+	opacity: 0;
+}
+.delete:hover{
+	cursor:pointer;
 }
 
 .checked{
