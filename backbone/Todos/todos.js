@@ -16,7 +16,7 @@ $(function(){
 		model : Item
 	});
 
-
+	//输入框
 	var InputView = Backbone.View.extend({
 		el : $('#todos'),
 		initialize : function(){
@@ -39,6 +39,25 @@ $(function(){
 		}
 	});
 
+	//编辑框
+	var EditView = Backbone.View.extend({
+		tagName : 'input',
+		className : 'todosInput',
+		id : 'modify',
+		attributes : {
+			type : 'text',
+			placeholder : '代办事务'
+		},
+
+		initialize : function(){
+			_.bindAll(this,'render');
+		},
+		render : function(){
+			$(this.el).val(this.model.get('content'));
+			return this;
+		}
+	});
+
 	//列表单项，选择，
 	var ItemView = Backbone.View.extend({
 		tagName : 'li',
@@ -50,7 +69,7 @@ $(function(){
 			$(this.el).html('<input class="checked" type="checkbox"><span>'
 			 + this.model.get('content') + '</span><div class="delete"></div>');
 			return this;
-		},
+		}
 	});
 	//列表
 	var ListView = Backbone.View.extend({
@@ -58,7 +77,9 @@ $(function(){
 		events : {
 			'mouseover li' : 'showDelete',
 			'mouseleave li' : 'hideDelete',
-			'click .delete':'deleteItem'
+			'click .delete':'deleteItem',
+			'dblclick li' : 'editing',
+			'blur #modify' : 'edited'
 		},
 
 		initialize : function(){
@@ -73,25 +94,58 @@ $(function(){
 				self.appendItem(item);
 			},this);
 		},
-		appendItem : function(item){
+		appendItem : function(item){ //添加列表项
 			var itemView = new ItemView({
 				model :item
 			});
 			$(this.el).append(itemView.render().el);
 		},
-		showDelete : function(event){
-			$(event.target).children('.delete').animate({opacity:1});
+		showDelete : function(event){ //展示删除按钮
+			$(event.target).children('.delete').animate({opacity:1},100);
 		},
-		hideDelete : function(event){
-			$(event.target).children('.delete').animate({opacity:0});
+		hideDelete : function(event){//隐藏删除按钮
+			$(event.target).children('.delete').animate({opacity:0},100);
 		},
-		deleteItem : function(event){
+		deleteItem : function(event){//删除列表项
 			var $deleteElement = $(event.target).parent('li');
 			var content = $deleteElement.children('span').html();
 			var item = this.collection.findWhere({content:content});
 			counter--;
 			this.collection.remove(item);
 			$deleteElement.remove();
+		},
+		editing : function(event){ //显示编辑框
+			var content = '';
+			var nodeName = event.target.nodeName.toLowerCase();
+			var $li;
+			if( nodeName === 'li'){
+				content = $(event.target).children('span').html();
+				$li = $(event.target);
+			} else if (nodeName === 'span'){
+				content = $(event.target).html();
+				$li = $(event.target).parent('li');
+			} else {
+				return;
+			}
+			var item = this.collection.findWhere({content:content});
+			this.editView = new EditView({
+				model : item
+			});
+			$li.html(this.editView.render().el);
+			$li.children('input').focus();
+		},
+		edited : function(event){ //显示编辑结果
+			var content = $(event.target).val();
+			if(/\S+/g.test(content)){
+				this.editView.model.set({
+					content : content
+				});
+				this.collection.add(this.editView.model,{merge:true}); //更新数据集
+				var itemView = new ItemView({
+					model : this.editView.model
+				});
+				$(event.target).parent('li').html(itemView.render().el);
+			}
 		}
 	});
 

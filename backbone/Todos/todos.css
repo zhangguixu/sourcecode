@@ -47,10 +47,10 @@ footer{
 }
 
 
-#todos{
+.todosInput{
 	display: block;
 	width: 500px;
-	height:50px;
+	height:40px;
 	margin: 0 auto;
 	border-radius: 0.2em;
 	border:solid 1px #EEEEEE;
@@ -58,7 +58,7 @@ footer{
 	text-indent:8px;
 }
 
-#todos:focus{
+.todosInput:focus{
 	border:solid 1px orange;
 }
 
@@ -71,8 +71,8 @@ footer{
 }
 
 #todoList li{
-	height: 35px;
-	line-height: 35px;
+	height: 40px;
+	line-height: 40px;
 	border-bottom:dashed 1px #EEEEEE;
 }
 
