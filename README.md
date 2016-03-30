@@ -101,6 +101,10 @@ js加载方式及加载性能优化
 
 MVC框架的学习
 
+## computer basis
+
+1. 堆和栈
+
 ## css
 
 ### basis
