@@ -36,4 +36,37 @@ Rect.prototype = Object.create(Shape.prototype);
     优点：
     缺点：
 
-### 修改
+### 最佳继承实现
+
+示例：基类Animal
+
+```javascript
+function Animal(legs){
+    this.legs = legs;
+}
+Animal.prototype.getLegs = function(){
+    console.log('I has ' + this.legs + 'legs');
+}
+```
+
+继承类Cat
+
+```javascript
+function Cat(name,legs){
+    Animal.call(this,legs);
+    this.name = name;
+}
+Cat.prototype = Object.create(Animal.protoype);
+Cat.prototype.sayName = function(){
+    console.log('my name is ' + this.name);
+}
+
+//Object.create的兼容性实现
+if(!Object.create){
+    Object.create = function(o){
+        function F(){}; //消除实例化之后所携带的基类的属性
+        F.prototypr = o;
+        return new F();
+    }
+}
+```

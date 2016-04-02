@@ -52,5 +52,5 @@ function addListener(el,type,listener){
         }
     }
     //绑定事件，第一次才会执行
-    addEvent(el,type,listener);
+    addListener(el,type,listener);
  }
