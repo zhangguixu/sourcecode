@@ -1,4 +1,4 @@
-# Data Structures & Algorithm with JavaScript
+# structure
 
 > 算法参考：http://algorithm.yuanbin.me/zh-hans/ <br>
 

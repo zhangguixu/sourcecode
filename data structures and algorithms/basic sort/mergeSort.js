@@ -4,66 +4,47 @@
 (function(exports){
 
 	//合并排好序的数组
-	function merge(arr1,arr2){
-		var len1 = arr1.length,
-			len2 = arr2.length,
-			i = 0,
-			j = 0,
-			tmp = [];
+	function merge(arr,low,mid,high){
+		var i,j,k; //辅助下标
+		var tmp = []; //辅助数组
 
-		while(i < len1 && j < len2){
-			if(arr1[i] < arr2[j]){
-				tmp.push(arr1[i]);
-				i++;
+		for(k = low; k <= high; k++){
+			tmp[k] = arr[k]; //先复制到tmp数组中
+		}
+
+		i = k = low;
+		j = mid+1;
+
+		while(i <= mid && j <= high){
+			if(tmp[i] < tmp[j]){
+				arr[k++] = tmp[i++];
 			} else {
-				tmp.push(arr2[j]);
-				j++;
+				arr[k++] = tmp[j++];
 			}
 		}
-
-		while(i < len1){
-			tmp.push(arr1[i]);
-			i++;
+		while(i <= mid){
+			arr[k++] = tmp[i++];
 		}
-
-		while(j < len2){
-			tmp.push(arr2[j]);
-			j++;
+		while(j <= high){
+			arr[k++] = tmp[j++];
 		}
-
-		return tmp;
 	}
 	//进行递归分治
-	function mergeSort(array){
+	function mergeSort(arr,low,high){
 
-		if(array.length <= 1){
-			return array;
-		}
-		var len = array.length,
-			mid = parseInt(len / 2), //注意转化成整数
-			left = [],
-			right = [],
-			i;
-
-		//进行数组切分
-		for(i = 0; i < mid; i++){
-			left.push(array[i]);
+		if(low < high){
+			var mid = parseInt( (low + high) / 2);
+			mergeSort(arr,low,mid);
+			mergeSort(arr,mid+1,high);
+			merge(arr,low,mid,high);
 		}
 
-		for(i = mid; i < len; i++){
-			right.push(array[i]);
-		}
-
-
-		left = mergeSort(left); //
-		right = mergeSort(right);//切分之后
-
-		return merge(left,right);
+		return arr;
 	}
 
 	function sort(array){
 		if(Object.prototype.toString.call(array) === '[object Array]'){
-			return mergeSort(array);
+			return mergeSort(array,0,array.length-1);
 		} else {
 			throw  new Error('illegal parameter');
 		}
