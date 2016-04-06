@@ -65,7 +65,7 @@ Cat.prototype.sayName = function(){
 if(!Object.create){
     Object.create = function(o){
         function F(){}; //消除实例化之后所携带的基类的属性
-        F.prototypr = o;
+        F.prototype = o;
         return new F();
     }
 }
