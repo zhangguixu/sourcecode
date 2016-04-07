@@ -36,6 +36,7 @@
 1. emmet
 2. github-markdown
 3. git 常用指令
+4. timeline使用
 
 ##form
 
