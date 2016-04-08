@@ -18,6 +18,7 @@
 11. [原型链](./basis/prototype-chain.md)
 12. [img（web前端图片知识）](./basis/img.md)
 13. [页面坐标，元素坐标的计算](./basis/element-position.md)
+14. [cookie](./basis/cookie.md)
 
 ### html5
 
