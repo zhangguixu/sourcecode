@@ -220,7 +220,7 @@
 
             ```javascript
             var img = new Image();
-            img.src = '01.png'; //原理同上
+            img.src = '01.png'; //原理同上,只不过无法将其添加到DOM树。
             ```
 
 2. 懒加载

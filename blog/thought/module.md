@@ -135,6 +135,11 @@ CMD（Common Module Definition）通用模块定义，是`SeaJS`在推广过程�
 
     例如：AMD里的require分全局的和局部的，CMD里面没有全局的require，而是使用seajs.use()来实现模块系统额加载启动。CMD里的每个API都简单纯粹。
 
+## UMD
+
+UMD是AMD和CommonJS的柔和，目的是做到跨平台。
+
+UMD先判断是否支持Node.js的模块（exports）是否存在，存在则使用node.js模块模式，再判断是否支持AMD（define是否存在），存在则使用AMD方式加载模块。
 
 
 

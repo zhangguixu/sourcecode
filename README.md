@@ -1,164 +1,118 @@
-前端学习笔记
+前端成长之路
 ====================
 
 ## basis
 
 ### 基础知识
 
-1. array(properties & prototype)
-2. data type transform(数据类型转换)
-3. advanced skill（高级技巧，高级函数，防篡改对象，高级定时器）
-4. regular-expression 正则表达式查阅表
-5. call & apply
-6. security（关于安全的一些常识）
-7. page-performance（网页生成的过程及对性能的影响）
-8. head（头标签总结）
-9. this的使用
-10. event-loop(task queue,execution context stack)
-11. operator操作符的优先级
-12. prototype-chain原型链
-13. img（web前端图片知识）
-14. element-position (页面坐标，元素坐标的计算)
-15. img 前端图片的基础知识，图片加载优化，图片上传
+1. [数组属性和操作方法](./basis/array.md)
+2. [数据类型转换（显示或隐式）](./basis/data-type-transform.md)
+3. [高级技巧，高级函数，防篡改对象，高级定时器](./basis/advanced-skill.md)
+4. [正则表达式查阅表](./basis/regular-expression.md)
+5. [安全相关话题，js运行限制](./basis/security.md)
+6. [网页生成的过程及对性能的影响](./basis/page-performance.md)
+7. [head（头标签总结）](./basis/head.md)
+8. [this使用技巧总结](./basis/this.md)
+9. [事件循环机制](./basis/event-loop.md)
+10. [operator操作符的优先级](./basis/operator.md)
+11. [原型链](./basis/prototype-chain.md)
+12. [img（web前端图片知识）](./basis/img.md)
+13. [页面坐标，元素坐标的计算](./basis/element-position.md)
 
 ### html5
 
-1. History API
-2. Web Worker
-3. File API
-4. WebSocket
-
+1. [History API](./basis/html5/history.md)
+2. [Web Worker](./basis/html5/worker.md)
+3. [Web Socket](./basis/html5/websocket.md)
 
 ##tools
 
 存储一些便捷的插件工具的指令，来提高开发的效率
 
-1. emmet
-2. github-markdown
-3. git 常用指令
-4. timeline使用
+1. [emmet](./tools/emmet)
+2. [github-markdown](./tools/github-markdown.md)
+3. [git 常用指令](./tools/git.md)
+4. [timeline使用](./tools/timeline.md)
 
 ##form
 
-### validation
-
-1. 是否为空
-2. 手机号码
-3. 邮箱
-
-### submit
-
-模拟表单，利用submit事件，实现`post()`
-
+1. [validation](./form/validation.js)
+2. [post](./form/post.js)
+3. [checkbox](./form/check.js)
 
 ## network
 
-1. http
-
-	http/https基础知识，http headers，脚本化http
-
-2. dns
-
-	dns基础知识，域名解析
-
-3. cdn
-
-	cdn基础知识
-
-## dom
-
-### dom操作的性能优化
-
-### image
-
-1. 预加载
-2. src属性的特点
-
-###operation（DOM操作注意点）
-
-1. 重绘和重排版
-2. 最小化重绘和重排版
-
-## performance
-
-1. 性能优化
-
-	循环（达夫设备），选择（优化选择条件），递归（栈不足），迭代，制表（缓存提速）
-
-2. 响应接口
-
-	使用定时器进行时间分片，来解决浏览器限制的问题web work的应用，可以带来的好
-	处和变化
-
-3. yahoo
-
-	yahoo前端性能规则
-
-## loadJS
-
-js加载方式及加载性能优化
-
-## backbone
-
-MVC框架的学习
-
-## computer basis
-
-1. 堆和栈
-
-## css
-
-### basis
-
-1. 盒子模型
-2. 层叠
-3. 垂直水平居中
-4. display属性
-5. css hack
-6. 块级/行内元素
-7. position属性
-
-### css3
-
-css3知识
-
-### hack
-
-兼容性css代码
+1. [前端中的http](./network/http.md)
+2. [dns](./network/dns.md)
+3. [web缓存](./network/cache.md)
+4. [浏览器与服务器的通信总结](./network/browserToServer.md)
+5. [http基础TCP](./network/tcp.md)
+6. [jsonp简单实现](./network/jsonp.md)
 
 ***
 
-# book
+# 框架学习
+
+## backbone
+
+[MVC框架的学习](./backbone/README.md)
+
+## jquery
+
+[jquery的操作总结](./jquery)
+
+***
+
+# css
+
+## basis
+
+1. [盒子模型](./css/box.md)
+2. [层叠](./css/cascade.md)
+3. [垂直水平居中常用解决](./css/center.md)
+4. [display属性](./css/display.md)
+5. [css hack](./css/hack.md)
+6. [position属性](./css/position.md)
+7. [css布局](./css/layout.md)
+8. [响应式设计](./css/responsiveWebDesign.md)
+
+## css3
+
+1. [flex布局](./css/css3/flex.md)
+
+***
+
+# 书籍
 
 ##frame design
 
-司徒正美 《JavaScript 框架设计》读书笔记
+[司徒正美《JavaScript 框架设计》](./book/frame design/README.md)
 
 ##Professional JavaScript
 
-Nicholas C.Zakas 《JavaScript 高级程序设计》3rd Edition
+[Nicholas C.Zakas 《JavaScript 高级程序设计》](./book/professional javascript/README.md)
 
-##best practice
+##maintainable javascript
 
-Nicholas.C.Zakas《编写可维护的JavaScript》读书笔记
-
-##html5
-
-Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》读书笔记、
+[Nicholas.C.Zakas《编写可维护的JavaScript》](./book/maintainable javascript/README.md)
 
 ## high performance javascript
 
-Nicholas.C.Zakas 《高性能JavaScript编程》
+[Nicholas.C.Zakas 《高性能JavaScript编程》](./book/high performance)
+
+##html5
+
+[Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》](./book/html5 programming/README.md)
 
 ## Developing JavaScript Web Applications
 
-Alex MacCaw  《JavaScript Web 富应用开发》
+[Alex MacCaw  《JavaScript Web 富应用开发》](./book/developing javascript web application/README.md)
 
 ***
 
 # 数据结构 & 算法
 
-## 基础排序
+### [基础排序](./data structures and algorithms/basic sort/README.md)
 
 1. 冒泡排序
 2. 选择排序
@@ -166,11 +120,22 @@ Alex MacCaw  《JavaScript Web 富应用开发》
 4. 归并排序
 5. 快速排序
 
-## 链表
+### [链表](./data structures and algorithms/structure.md)
 
-## 堆
+### [堆](./data structures and algorithms/structure.md)
 
-## 二叉树
+### [二叉树](./data structures and algorithms/tree.md)
+
+### [图](./data structures and algorithms/graph.md)
+
+***
+
+# 计算机基础知识
+
+1. [堆和栈](./computer basis/stack-heap.md)
+2. [死锁](./computer basis/deadlock.md)
+3. [哈夫曼编码树](./computer basis/huff.md)
+4. [磁盘臂调度算法](./computer basis/disk.md)
 
 ***
 
@@ -178,39 +143,43 @@ Alex MacCaw  《JavaScript Web 富应用开发》
 
 ## blog
 
-### thought
+### 前端思考
 
-1. 如何成为一名优秀的前端工程师
-2. 前端知识架构
-3. 模块化规范
+1. [如何成为一名优秀的前端工程师](./blog/thought/font-end-developer.md)
+2. [前端知识架构](./blog/thought/knowledge-structure.md)
+3. [模块化规范](./blog/thought/module.md)
+4. [MVC的思考](./blog/thought/mvc.md)
+5. [编程范式](./blog/thought/programming-paradigm.md)
 
-### skill
+### 编程技巧
 
-1. JavaScript生成唯一值
-2. 数组元素去重问题
-3. 函数节流
-4. 数组反转
-5. DOM元素反转
-6. 对象转成JSON字符串
-7. 作用域绑定
-8. 去除标签
-9. 获得一个范围的随机数
-10. 去除字符串前后空格
+1. [JavaScript生成唯一值](./blog/skill/uniqueValue.md)
+2. [数组元素去重问题](./blog/skill/unique.md)
+3. [函数节流](./blog/skill/throttle.md)
+4. [数组反转](./blog/skill/reverse.md)
+5. [DOM元素反转](./blog/skill/reverseElement.md)
+6. [对象转成JSON字符串](./blog/skill/toJson.md)
+7. [作用域绑定](./blog/skill/bind.md)
+8. [去除标签](./blog/skill/escapeHtml.md)
+9. [获得一个范围的随机数](./blog/skill/getRandom.md)
+10. [去除字符串前后空格](./blog/skill/trim.md)
+11. [继承的实现方法](./blog/skill/inherit.md)
+12. [合并操作](./blog/skill/merge.md)
 
-### interview
+### 面试题整理
 
-1. 7个去伪存真的JavaScript面试题
-2. 一道常被人轻视的前端JS面试题
-3. Front End Developer Questions
-4. 前端知识点回顾
-5. 关于for()的一个小知识点
-6. 被问得最多的十个JavaScript前端面试问题
-7. 前端面试题集锦及答案
-8. 2015奇虎360面试题
-9. BAT2014前端笔试面试题：HTML/CSS篇
-10. 2016年Web前端面试题目汇总
-11. BAT2014前端笔试面试题：初级JavaScript篇
-12. BAT2014前端笔试面试题：中级Javascript篇
-13. JavaScript问题集锦 #2【难度比较大】
-14. 2014阿里前端笔试题：JavaScript篇
-15. 2014阿里前端笔试题：HTML/CSS篇
+1. [7个去伪存真的JavaScript面试题](./blog/interview/1.md)
+2. [一道常被人轻视的前端JS面试题](./blog/interview/2.md)
+3. [Front End Developer Questions](./blog/interview/3.md)
+4. [前端知识点回顾](./blog/interview/4.md)
+5. [关于for()的一个小知识点](./blog/interview/5.md)
+6. [被问得最多的十个JavaScript前端面试问题](./blog/interview/6.md)
+7. [前端面试题集锦及答案](./blog/interview/7.md)
+8. [2015奇虎360面试题](./blog/interview/8.md)
+9. [BAT2014前端笔试面试题：HTML/CSS篇](./blog/interview/9.md)
+10. [2016年Web前端面试题目汇总](./blog/interview/10.md)
+11. [BAT2014前端笔试面试题：初级JavaScript篇](./blog/interview/11.md)
+12. [BAT2014前端笔试面试题：中级Javascript篇](./blog/interview/12.md)
+13. [JavaScript问题集锦 #2【难度比较大】](./blog/interview/13.md)
+14. [2014阿里前端笔试题：JavaScript篇](./blog/interview/14.md)
+15. [2014阿里前端笔试题：HTML/CSS篇](./blog/interview/15.md)
