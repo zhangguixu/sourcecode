@@ -56,7 +56,7 @@
 
 ## [基础知识入门](./mobile web/README.md)
 
-1. pixel
+1. 像素基础
 2. viewport
 3. 布局（flexbox，响应式布局）
 4. 特殊样式处理

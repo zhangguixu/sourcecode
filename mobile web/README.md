@@ -2,7 +2,7 @@
 
 >来源： http://www.imooc.com/video/9579
 
-## 一、Pixel
+## 一、像素基础
 
 ### 1-1 概念
 
@@ -183,6 +183,8 @@ height : (h_value/dpr)px;
 
 ### 5-2 Touch事件基础
 
+**基础知识**
+
 *触摸才是移动设备交互的核心事件*
 
 1. 基础事件有
@@ -198,3 +200,21 @@ height : (h_value/dpr)px;
     * identifier
     * pageX/pageY
     * target
+
+3. touch事件包含的专有的触摸属性
+
+    * touches：跟踪触摸操作的touch对象数组
+    * targetTouches：特定事件目标的touch对象数组
+    * changeTouches：上次触摸改变的touch对象数组
+
+**bug**
+
+在Android只会触发一次touchstart，一次touchmove，不会触发touchend。
+
+解决方法：在touchmove中加入event.prevetDefault()，但event.preventDefault()会导致默认的行为不发生（如页面滚动）。
+
+**常见交互**
+
+1. 弹性滚动
+2. 下拉刷新
+3. 上拉加载
