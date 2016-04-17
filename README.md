@@ -34,6 +34,7 @@
 2. [github-markdown](./tools/github-markdown.md)
 3. [git 常用指令](./tools/git.md)
 4. [timeline使用](./tools/timeline.md)
+5. [compass](./tools/compass.md)
 
 ##form
 
