@@ -218,3 +218,8 @@ height : (h_value/dpr)px;
 1. 弹性滚动
 2. 下拉刷新
 3. 上拉加载
+
+
+## 五、资源
+
+> http://www.cnblogs.com/PeunZhang/p/3407453.html
