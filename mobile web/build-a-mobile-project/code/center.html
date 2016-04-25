@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" name="viewport">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta content="telphone=no" name="format-detection">
+  <title>等分</title>
+  <link media="all" href="http://www.w3cplus.com/mcommon/reset.css" rel="stylesheet">
+  <style>
+	.demo{
+	  line-height:44px;
+	  margin-bottom: 20px;
+	  text-align: center;
+	  background-color: #0078e7;
+	  color: #fff;
+	}
+
+	.flex-equal,.flex-center, .justify {
+	  display: -webkit-box;
+	  display: -ms-flexbox;
+	  display: -webkit-flex;
+	  display: flex;
+	}
+
+	.flex-equal li {
+	  -webkit-box-flex: 1;
+	  -ms-flex: 1;
+	  -webkit-flex: 1;
+	  flex: 1;
+	}
+
+	.table-equal {
+	  display: table;
+	  table-layout: fixed;
+	  width: 100%;
+	}
+	.table-equal li {
+	  display: table-cell;
+	}
+	.demo-center{
+	  border: 1px solid #ccc;
+	  margin:20px;
+	  height:200px;
+	}
+	.demo-center .children{
+	  background: #0078e7;
+	  color: #fff;
+	  width:150px;
+	  line-height:5;
+	  text-align:center;
+	}
+	.flex-center {
+	  -webkit-box-pack: center;
+	  -ms-flex-pack: center;
+	  -webkit-justify-content: center;
+	  justify-content: center;
+	  -webkit-box-align: center;
+	  -ms-flex-align: center;
+	  -webkit-align-items: center;
+	  align-items: center;
+	}
+
+	.translate-center{
+	  position: relative;
+	}
+
+	.translate-center .children{
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  -webkit-transform: translate(-50%, -50%);
+	  transform: translate(-50%, -50%);
+	}
+	.justify {
+	  -webkit-box-pack: justify;
+	  -ms-flex-pack: justify;
+	  -webkit-justify-content: space-between;
+	  justify-content: space-between;
+	  padding: 0 10px;
+	  background: #0078e7;
+	  color:#fff;
+	  line-height: 32px;
+	}
+  </style>
+</head>
+<body>
+  <h2>flex等分</h2>
+  <ul class="flex-equal demo">
+    <li>手机</li>
+    <li>联系人</li>
+    <li>信息</li>
+    <li>主屏</li>
+  </ul>
+
+  <ul class="flex-equal demo">
+    <li>手机</li>
+    <li>联系人</li>
+    <li>信息</li>
+  </ul>
+  <h2>table等分</h2>
+  <ul class="table-equal demo">
+    <li>手机</li>
+    <li>联系人</li>
+    <li>信息</li>
+    <li>主屏</li>
+  </ul>
+  <ul class="table-equal demo">
+    <li>手机</li>
+    <li>联系人</li>
+    <li>信息</li>
+  </ul>
+  <h2>flex居中</h2>
+  <div class="flex-center demo-center">
+    <div class="children">子元素水平垂直居中</div>
+  </div>
+  <h2>translate居中</h2>
+  <div class="translate-center demo-center">
+    <div class="children">子元素水平垂直居中</div>
+  </div>
+  <h2>两端对齐</h2>
+  <div class="justify"><h2>左边对齐</h2><span>右边对齐</span></div>
+</body>
+</html>

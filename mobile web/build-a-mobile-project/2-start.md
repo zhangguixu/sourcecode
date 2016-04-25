@@ -1,5 +1,7 @@
 # 移动端项目构建-2
 
+> 来源：http://www.w3cplus.com/mobile/mobile-terminal-refactoring-create-page.html
+
 ## 新建页面
 
 ### meta

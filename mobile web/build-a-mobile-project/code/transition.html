@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection"content="telephone=no, email=no" />
+	<link media="all" href="reset.css" rel="stylesheet">
+	<title>transition</title>
+	<style>
+	html,body{
+		height:100%;
+	}
+	.demo{
+	    -webkit-transform:translate3d(-200px,0,0);
+	    transform:translate3d(-200px,0,0);
+	    -webkit-transition:-webkit-transform 0.3s ease-in-out;
+	    transition:transform 0.3s ease-in-out;
+
+	    background-color: #000;
+		width: 200px;
+		height:100%;
+	}
+	.translate-in{
+	    -webkit-transform:translate3d(0,0,0);
+	    transform:translate3d(0,0,0);
+	}
+	button{
+		display: inline-block;
+		position: absolute;
+		top:10px;
+		left:10px;
+		background-color: #E41D1D;
+		border:none;
+		color:#fff;
+		-webkit-transform:translate3d(0,0,0);
+	    transform:translate3d(0,0,0);
+		-webkit-transition:-webkit-transform 0.3s ease-in-out;
+	    transition:transform 0.3s ease-in-out;
+	}
+	.translate-button{
+		-webkit-transform:translate3d(200px,0,0);
+	    transform:translate3d(200px,0,0);
+	}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		demo
+	</div>
+	<button>出现</button>
+	<script src="../../lib/zepto.min.js"></script>
+	<script>
+	$(function(){
+		$('button').on('tap',function(){
+			$(this).addClass('translate-button');
+			$('.demo').addClass('translate-in');
+		});
+	})
+	</script>
+</body>
+</html>

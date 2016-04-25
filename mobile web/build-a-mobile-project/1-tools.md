@@ -1,5 +1,7 @@
 # 移动端项目构建-1
 
+> 来源：http://www.w3cplus.com/mobile/mobile-terminal-refactoring-preparatory-work.html
+
 ## 前期准备
 
 ### 开发工具的选择
