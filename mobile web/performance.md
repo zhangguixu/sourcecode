@@ -167,14 +167,58 @@
 
 2. 减少接口数据量
 
+    减少传输数据的体积
+
 3. 缓存接口数据
 
 ### 7. 其他细节
 
-## 移动端
+1. 合理使用CSS
+
+    * 正确使用display属性，这个属性会影响页面的渲染，需要合理使用
+    * display:inline后不应该再使用无效的属性（width,height,margin等）
+    * display:inline-block后不应该再使用float
+    * diplay:block不应该再使用vertical-align
+    * display:table-*后不应该使用vertical-aglin
+    * display:table-*后不应该再使用margin或float
+    * 不滥用float
+    * 不声明过多的font-size
+    * 值为0时不需要单位
+    * 标准化各种浏览器前缀
+    * 无前缀应放在最后
+    * CSS动画只用-webkit-和无前缀两种即可
+    * 其他前缀为-webkit- -moz- -ms- 无前缀四种
+
+2. 选择器
+
+    * 避免让选择符看起来像是正则表达式。高级选择器不容易读懂，执行耗时也长
+    * 尽量使用ID选择器
+    * 尽量使用CSS3动画
+
+3. 资源加载
+
+    * 使用srcset
+    * 首次加载不超过1024KB
+
+4. UI
+
+    * 减少重绘和回流
+    * 缓存DOM选择和计算
+    * 缓存列表的length
+    * 尽量使用事件代理，避免批量绑定事件
+    * 使用touchstart，touchend代替click
+    * 使用viewport
+    * 减少dom节点
+    * 合理使用requestAnimationFrame动画代替setTimeout
+    * 适当使用canvas动画
+    * touchmove,scroll事件会导致多次渲染
+
+## 更进一步
 
 ### 1. 单页应用
 
 ### 2. 资源离线
 
-*待续*
+涉及到一个本地数据持久化和更新机制的问题
+
+### 3. 预加载
