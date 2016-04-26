@@ -1,6 +1,8 @@
 # 移动端项目构建
 
-> 参考：http://www.w3cplus.com/mobile/
+> 来源：http://www.w3cplus.com/mobile/   <br>
+> sandal(css项目)：https://github.com/marvin1023/sandal
+
 
 ## [1. 前期准备](./1-tools.md)
 
@@ -38,3 +40,18 @@
 3. 左右两端对齐
 
     * flex
+
+## [6. 动画](./6-animation.md)
+
+1. transition
+2. animation
+
+## [7. 图标](./7-icon.md)
+
+1. 雪碧图
+2. base64
+3. css3图标
+4. 字体图标
+
+## [8. 滚动](./8-scroll.md)
+
