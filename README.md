@@ -71,11 +71,19 @@
 
 ## backbone
 
-[MVC框架的学习](./backbone/README.md)
+[MVC框架的学习](./framework/backbone/README.md)
 
 ## jquery
 
-[jquery的操作总结](./jquery)
+[jquery的操作总结](./framework/jquery)
+
+## vue
+
+[Vue.js的详细学习](./vue/README.md)
+
+## react
+
+[了解react重要的概念](./framework/react.md)
 
 ***
 
