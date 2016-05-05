@@ -6,22 +6,19 @@
 	<script src="./lib/vue.js"></script>
 </head>
 <body>
-	<div id="demo">
-	    {{ fullName }}
-	</div>
+	<div id="example">
+    <button v-on:click="say('hi')">Say Hi</button>
+    <button v-on:click="say('what')">Say What</button>
+</div>
 	<script>
-		var vm = new Vue({
-		    el : '#demo',
-		    data : {
-		        firstName : 'Foo',
-		        lastName : 'Bar'
-		    },
-		    computed : {
-		        fullName : function(){
-		            return this.firstName + ' ' + this.lastName;
-		        }
-		    }
-		});
+new Vue({
+    el : '#example',
+    methods : {
+        say : function(msg){
+            alert(msg);
+        }
+    }
+});
 	</script>
 </body>
 </html>
