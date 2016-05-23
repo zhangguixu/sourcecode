@@ -51,6 +51,10 @@
 5. [http基础TCP](./network/tcp.md)
 6. [jsonp简单实现](./network/jsonp.md)
 
+## es6
+
+1. [promise](./es6/promise.md)
+
 ***
 
 # 移动Web端
@@ -135,6 +139,10 @@
 ## Developing JavaScript Web Applications
 
 [Alex MacCaw  《JavaScript Web 富应用开发》](./book/developing javascript web application/README.md)
+
+## Advanced DOM Scripting
+
+[Jeffrey Sambells\Aaron Gustafson《JavaScript DOM高级程序设计》](./Advanced DOM Scripting/README.md)
 
 ***
 
