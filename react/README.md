@@ -22,7 +22,7 @@ React实现了组件化开发的思想，践行了Web Components的理念。
 ###[1. JSX](./jsx.md)
 
 
-## 提升
+## 深入了解
 
 ###[1. virtual dom](./virtual-dom.md)
 

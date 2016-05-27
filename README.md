@@ -87,7 +87,7 @@
 
 ## react
 
-[了解react重要的概念](./framework/react.md)
+[react的详细学习](./react/README.md)
 
 ***
 
