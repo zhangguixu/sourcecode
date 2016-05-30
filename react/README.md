@@ -23,6 +23,8 @@ React实现了组件化开发的思想，践行了Web Components的理念。
 
 ###[2. 组件的生命周期](./components.md)
 
+###[3. 数据流](./dataflow.md)
+
 ## 深入了解
 
 ###[1. virtual dom](./virtual-dom.md)
