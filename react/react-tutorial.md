@@ -158,11 +158,42 @@ React践行了`Web Components`的理念，依照组件化的开发方式，我�
             - Comment
         - CommentForm
 
-#### Comment
+#### 组件Comment
 
-如上述的结构图，我们从最底层开始编写组件
+如上述的结构图，我们从最底层开始编写组件`Comment`
 
+```javascript
+var Comment = React.createClass({
+    render : function() {
+        return (
+            <div className="comment">
+                <h2 className="commentAuthor">
+                    {this.props.author}
+                </h2>
+                {this.props.children}
+            </div>
+        );
+    }
+});
+```
 
+上一层的组件`CommentList`创建`Comment`组件时，需要传递两个参数，一个是`author`，一个是`children`(评论的内容)，数据在组件之间的传递，使用的是属性`props`。
+
+#### 组件CommentList
+
+作为组件`Comment`的父组件，`CommentList`传递`author`和`children`两个属性
+
+```javascript
+var CommentList = React.createClass({
+    render : function() {
+        return (
+            <div className="commentList">
+                <Comment author={this.props.author} children />
+            </div>
+        );
+    }
+})
+```
 
 
 
