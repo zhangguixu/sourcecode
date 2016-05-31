@@ -24,9 +24,10 @@ React实现了组件化开发的思想，践行了Web Components的理念。
 
 1. React本身
 
-    1. 官方的教程（将进行详细的学习）[react-tutorial](http://facebook.github.io/react/docs/tutorial.html)
-    2. Imooc网的Materliu老师的视频教程[React入门](http://www.imooc.com/learn/504)
-    3. 书籍[《React引领未来的用户界面开发框架》](https://www.amazon.cn/React-%E5%BC%95%E9%A2%86%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6-%E5%8D%93%E8%B6%8A%E5%BC%80%E5%8F%91%E8%80%85%E8%81%94%E7%9B%9F/dp/B00WUA5OL8/ref=sr_1_1?ie=UTF8&qid=1464597667&sr=8-1&keywords=react%E5%BC%95%E9%A2%86%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6)
+    1. 官方的教程1[react-tutorial](http://facebook.github.io/react/docs/tutorial.html)
+    2. 官方的教程2[thinking-in-react](http://facebook.github.io/react/docs/thinking-in-react.html)
+    3. Imooc网的Materliu老师的视频教程[React入门](http://www.imooc.com/learn/504)
+    4. 书籍[《React引领未来的用户界面开发框架》](https://www.amazon.cn/React-%E5%BC%95%E9%A2%86%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6-%E5%8D%93%E8%B6%8A%E5%BC%80%E5%8F%91%E8%80%85%E8%81%94%E7%9B%9F/dp/B00WUA5OL8/ref=sr_1_1?ie=UTF8&qid=1464597667&sr=8-1&keywords=react%E5%BC%95%E9%A2%86%E6%9C%AA%E6%9D%A5%E7%9A%84%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6)
     4. 深入研究React的特点
 
 2. npm
@@ -40,9 +41,11 @@ React实现了组件化开发的思想，践行了Web Components的理念。
 10. Relay,Falcor等
 
 
-## 官方学习例子
+## 官方教程Quick start
 
-[学习笔记](./react-tutorial.md)
+[1. react-tutorial](./react-tutorial.md)
+
+[2. thinking in React](./thinking-in-react.md)
 
 ## 书籍内容
 
