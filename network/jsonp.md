@@ -27,4 +27,54 @@
 
 3. 客户端接收到返回的js脚本，开始解析和执行`fn(response)`
 
+### jsonp简单实现
+
+```javascript
+function jsonp(req){
+    var script = document.createElement('script');
+    var url = req.url + '?callback=' + req.callback.name;
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script); 
+}
+```
+
+前端js示例
+
+```javascript
+function hello(res){
+    alert('hello ' + res.data);
+}
+jsonp({
+    url : '',
+    callback : hello 
+});
+```
+
+服务器端代码
+
+```javascript
+var http = require('http');
+var urllib = require('url');
+
+var port = 8080;
+var data = {'data':'world'};
+
+http.createServer(function(req,res){
+    var params = urllib.parse(req.url,true);
+    if(params.query.callback){
+        console.log(params.query.callback);
+        //jsonp
+        var str = params.query.callback + '(' + JSON.stringify(data) + ')';
+        res.end(str);
+    } else {
+        res.end();
+    }
+    
+}).listen(port,function(){
+    console.log('jsonp server is on');
+});
+```
+
+
+
 
