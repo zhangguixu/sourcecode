@@ -53,7 +53,9 @@
 
 ## es6
 
-1. [promise](./es6/promise.md)
+1. [ES6快速了解](./es6/README.md)
+2. [promise](./es6/promise.md)
+ 
 
 ***
 
