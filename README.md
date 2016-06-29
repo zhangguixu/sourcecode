@@ -54,13 +54,14 @@
 
 ##tools
 
-存储一些便捷的插件工具的指令，来提高开发的效率
+工欲善必先利
 
 1. [emmet](./tools/emmet)
 2. [github-markdown](./tools/github-markdown.md)
 3. [git 常用指令](./tools/git.md)
 4. [timeline使用](./tools/timeline.md)
 5. [compass](./tools/compass.md)
+6. [sublime](./tools/sublime.md)
 
 ##form
 

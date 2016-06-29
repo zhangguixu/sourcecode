@@ -50,11 +50,53 @@ function FastClick(layer) {
     //IOS6+？系统
     var deviceIsIOSWithBadTarget = deviceIsIOS
                  && (/OS ([6-9]|\d{2})_\d/).test(navigator.userAgent); 
+
+    if(deviceIsAndroid) {
+        
+    }
 }
 
 FastClick.prototype.onMouse = function(event) {
+    'use strict';
+
+    if(!this.targetElement) {
+        return true;
+    }
+    //自定义的event属性
+    if(event.forwardedTouchEvent) {
+        return true;
+    }
+    //自定义的event属性
+    if(!event.cancelable) {
+
+    }
     
+    //如果不需要此次点击，或者取消点击
+    if(!this.needsClick(this.targetElement) 
+        || this.cancelNextClick) {
+        /*  
+            event.stopImmediatePropagation
+            除了可以阻止事件冒泡之外，
+            还可以把这个元素绑定的同类型事件也阻止了
+        */
+        if(event.stopImmediatePropagation) {
+            event.stopImmediatePropagation();
+        } else {
+            //hack,当浏览器不支持stopImmediatePropagation
+            event.propagationStopped = true;
+        }
+
+        //取消事件
+        event.stopPropagation();
+        event.preventDefault();
+
+        return false;
+    }
+
+    return true;
 }
+
+
 ```
 
 
