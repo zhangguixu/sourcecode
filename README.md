@@ -104,7 +104,11 @@
 
 ## 移动端页面开发与调试
 
-1. [debug](./mobile web/debu.md)
+1. [debug](./mobile web/debug.md)
+
+## hybrid
+
+1. [jsbridge基础知识](./mobile web/jsbridge.md)
 
 ## [构建移动端项目](./mobile web/build-a-mobile-project/README.md)
 
