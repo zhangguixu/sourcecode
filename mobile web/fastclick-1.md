@@ -111,7 +111,18 @@
 
 如果刚触发完touchstart事件马上就触发touchend，说明手指只是轻轻点了一下屏幕，也就是所谓的点击操作。这样即使不监听click事件也能实现点击的侦听。不过这里有一个实际的情况，很多山寨的Android设备屏幕很不灵敏，需要使劲按下才能有所感知。这种情况下一定会触发touchmove事件。所以针对Android设备的点击操作可以适当放宽，比如touchstart和touchend之间可以允许有少量几个touchmove，并且touchmove的距离不能超过多少个像素等等
 
-因此
+因此也是需要监听onTouchMove，并且加入判断
+
+```javascript
+// If the touch has moved, cancel the click tracking
+if ( 
+    this.targetElement !== this.getTargetElementFromEventTarget(event.target) 
+    || this.touchHasMoved(event)
+    ) {
+    this.trackingClick = false;
+    this.targetElement = null;
+}
+ ```
 
 #### onTcouhEnd()
 
@@ -119,21 +130,6 @@
 
 2. 判断是否在追踪该click，在`this.onTouchMove`的时候，如果移动的距离大于边界，则将`this.trackingClick=false`，在`touchend`就不用再判断是否为一个click的行为
     
-    this.onTouchMove
-
-    ```javascript
-    // If the touch has moved, cancel the click tracking
-    if ( 
-    this.targetElement !== this.getTargetElementFromEventTarget(event.target) 
-        || this.touchHasMoved(event)
-        ) {
-        this.trackingClick = false;
-        this.targetElement = null;
-    }
-    ```
-
-    this.onTouchEnd
-
     ```javascript
     if(!this.trackingClick){
         return true;
