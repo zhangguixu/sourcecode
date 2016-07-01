@@ -97,6 +97,11 @@
 4. 特殊样式处理
 5. 交互优化
 
+## fastclick解析
+
+1. [fastclick源码注释](./mobile web/fastclick.md)
+2. [fastclick原理解析](./mobile web/fastclick-1.md)
+
 ## [构建移动端项目](./mobile web/build-a-mobile-project/README.md)
 
 ***

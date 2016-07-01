@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>点击测试</title>
+</head>
+<body>
+	<botton id="btn">点击我</button>
+	<script>
+		var btn = document.getElementById('btn');
+		btn.addEventListener('click',function(e){
+			return false;
+		},false);
+		btn.addEventListener('click',function(e){
+			alert('still work!');
+		},false)
+	</script>
+</body>
+</html>
