@@ -10,12 +10,22 @@
 	<botton id="btn">点击我</button>
 	<script>
 		var btn = document.getElementById('btn');
-		btn.addEventListener('click',function(e){
-			return false;
+		// btn.addEventListener('click',function(e){
+		// 	return false;
+		// },false);
+		// btn.addEventListener('click',function(e){
+		// 	alert('btn');
+		// },false)
+		// document.body.addEventListener('click',function(){
+		// 	alert('body');
+		// },true)
+		btn.addEventListener('touchstart',function(e){
+			alert('btn');
 		},false);
-		btn.addEventListener('click',function(e){
-			alert('still work!');
-		},false)
+
+		document.body.addEventListener('touchstart',function(e){
+			alert('body');
+		},false);
 	</script>
 </body>
 </html>
