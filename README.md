@@ -46,6 +46,7 @@
 13. [页面坐标，元素坐标的计算](./basis/element-position.md)
 14. [cookie](./basis/cookie.md)
 15. [JavaScript的小技巧](./basis/js-skill.md)
+16. [闭包](./basis/closure.md)
 
 ### html5
 
@@ -150,6 +151,7 @@
 6. [position属性](./css/position.md)
 7. [css布局](./css/layout.md)
 8. [响应式设计](./css/responsiveWebDesign.md)
+9. [元素大小和位置](./css/el-width-position.md)
 
 ## css3
 
