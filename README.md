@@ -2,7 +2,7 @@
 ====================
 
 ```javascript
-/*
+
                    _ooOoo_
                   o8888888o
                   88" . "88
@@ -23,7 +23,6 @@
                    `=---='
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
          佛祖保佑       永无BUG
-*/
 ```
 
 
@@ -47,6 +46,7 @@
 14. [cookie](./basis/cookie.md)
 15. [JavaScript的小技巧](./basis/js-skill.md)
 16. [闭包](./basis/closure.md)
+17. [模块简易管理](./basis/module.md)
 
 ### html5
 
