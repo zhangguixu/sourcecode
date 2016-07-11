@@ -62,9 +62,8 @@
 1. [emmet](./tools/emmet)
 2. [github-markdown](./tools/github-markdown.md)
 3. [git 常用指令](./tools/git.md)
-4. [timeline使用](./tools/timeline.md)
-5. [compass](./tools/compass.md)
-6. [sublime](./tools/sublime.md)
+4. [compass](./tools/compass.md)
+5. [sublime](./tools/sublime.md)
 
 ##form
 
@@ -107,6 +106,7 @@
 ## 移动端页面开发与调试
 
 1. [debug](./mobile web/debug.md)
+2. [性能优化，timeline使用](./tools/timeline.md)
 
 ## hybrid
 
