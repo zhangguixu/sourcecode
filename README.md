@@ -48,6 +48,7 @@
 15. [JavaScript的小技巧](./basis/js-skill.md)
 16. [闭包](./basis/closure.md)
 17. [模块简易管理](./basis/module.md)
+18. [动画性能优化](./basis/animation.md)
 
 ### html5
 
@@ -158,6 +159,7 @@
 ## css3
 
 1. [flex布局](./css/css3/flex.md)
+2. [(尚未总结)transform](./css/css3/transform.md)
 
 ## framework
 
