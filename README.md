@@ -26,10 +26,7 @@
 */
 ```
 
-
-## basis
-
-### 基础知识
+## 前端基础知识
 
 1. [数组属性和操作方法](./basis/array.md)
 2. [数据类型转换（显示或隐式）](./basis/data-type-transform.md)
@@ -49,16 +46,16 @@
 16. [闭包](./basis/closure.md)
 17. [模块简易管理](./basis/module.md)
 18. [动画性能优化](./basis/animation.md)
+19. [从零开始编写JavaScript框架]()
 
-### html5
 
-1. [History API](./basis/html5/history.md)
-2. [Web Worker](./basis/html5/worker.md)
-3. [Web Socket](./basis/html5/websocket.md)
+## html5
 
-##tools
+1. [History API](./html5/history.md)
+2. [Web Worker](./html5/worker.md)
+3. [Web Socket](./html5/websocket.md)
 
-工欲善必先利
+## tools
 
 1. [emmet](./tools/emmet)
 2. [github-markdown](./tools/github-markdown.md)
@@ -67,7 +64,7 @@
 5. [sublime](./tools/sublime.md)
 6. [visual studio code](./tools/visual-studio-code.md)
 
-##form
+## form
 
 1. [validation](./form/validation.js)
 2. [post](./form/post.js)
@@ -87,12 +84,11 @@
 1. [ES6快速了解](./es6/README.md)
 2. [promise](./es6/promise.md)
  
-
 ***
 
 # 移动Web端
 
-## [基础知识入门](./mobile web/README.md)
+## [基础知识入门](./mobile/README.md)
 
 1. 像素基础
 2. viewport
@@ -102,27 +98,23 @@
 
 ## fastclick解析
 
-1. [fastclick源码注释](./mobile web/fastclick.md)
-2. [fastclick原理解析](./mobile web/fastclick-1.md)
+1. [fastclick源码注释](./mobile/fastclick.md)
+2. [fastclick原理解析](./mobile/fastclick-1.md)
 
 ## 移动端页面开发与调试
 
-1. [debug](./mobile web/debug.md)
+1. [debug](./mobile/debug.md)
 2. [性能优化，timeline使用](./tools/timeline.md)
 
 ## hybrid
 
-1. [jsbridge基础知识](./mobile web/jsbridge.md)
+1. [jsbridge基础知识](./mobile/jsbridge.md)
 
-## [构建移动端项目](./mobile web/build-a-mobile-project/README.md)
+## [构建移动端项目](./mobile/build-a-mobile-project/README.md)
 
 ***
 
 # 框架学习
-
-## 从零开始编写JavaScript框架
-
-[博文的书摘](./javascript framework/README.md)
 
 ## backbone
 
@@ -167,41 +159,37 @@
 
 ***
 
-# 书籍
+# 书单
 
-##frame design
+## JavaScript框架设计
 
-[司徒正美《JavaScript 框架设计》](./book/frame design/README.md)
+[司徒正美《JavaScript 框架设计》](./book/frame-design/README.md)
 
-##Professional JavaScript
+## JavaScript高级编程
 
-[Nicholas C.Zakas 《JavaScript 高级程序设计》](./book/professional javascript/README.md)
+[Nicholas C.Zakas 《JavaScript 高级程序设计》](./book/professional-javascript/README.md)
 
-##maintainable javascript
+## 编写可维护的JavaScript
 
-[Nicholas.C.Zakas《编写可维护的JavaScript》](./book/maintainable javascript/README.md)
+[Nicholas.C.Zakas《编写可维护的JavaScript》](./book/maintainable-javascript/README.md)
 
-## high performance javascript
+## 高性能JavaScript编程
 
-[Nicholas.C.Zakas 《高性能JavaScript编程》](./book/high performance)
+[Nicholas.C.Zakas 《高性能JavaScript编程》](./book/high-performance)
 
-##html5
+## HTML5程序设计(2rd)
 
-[Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》](./book/html5 programming/README.md)
+[Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》](./book/html5-programming/README.md)
 
-## Developing JavaScript Web Applications
+## JavaScript web富应用开发
 
-[Alex MacCaw  《JavaScript Web 富应用开发》](./book/developing javascript web application/README.md)
-
-## Advanced DOM Scripting
-
-[Jeffrey Sambells\Aaron Gustafson《JavaScript DOM高级程序设计》](./Advanced DOM Scripting/README.md)
+[Alex MacCaw  《JavaScript Web 富应用开发》](./book/developing-javascript-web-application/README.md)
 
 ***
 
 # 数据结构 & 算法
 
-### [基础排序](./data structures and algorithms/basic sort/README.md)
+### [基础排序](./data-structures-and-algorithms/basic-sort/README.md)
 
 1. 冒泡排序
 2. 选择排序
@@ -209,22 +197,22 @@
 4. 归并排序
 5. 快速排序
 
-### [链表](./data structures and algorithms/structure.md)
+### [链表](./data-structures-and-algorithms/structure.md)
 
-### [堆](./data structures and algorithms/structure.md)
+### [堆](./data-structures-and-algorithms/structure.md)
 
-### [二叉树](./data structures and algorithms/tree.md)
+### [二叉树](./data-structures-and-algorithms/tree.md)
 
-### [图](./data structures and algorithms/graph.md)
+### [图](./data-structures-and-algorithms/graph.md)
 
 ***
 
 # 计算机基础知识
 
-1. [堆和栈](./computer basis/stack-heap.md)
-2. [死锁](./computer basis/deadlock.md)
-3. [哈夫曼编码树](./computer basis/huff.md)
-4. [磁盘臂调度算法](./computer basis/disk.md)
+1. [堆和栈](./computer-science/stack-heap.md)
+2. [死锁](./computer-science/deadlock.md)
+3. [哈夫曼编码树](./computer-science/huff.md)
+4. [磁盘臂调度算法](./computer-science/disk.md)
 
 ***
 
