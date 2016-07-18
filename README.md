@@ -103,7 +103,6 @@
 3. [Vue](./vue/README.md)
 4. [React](./react/README.md)
 
-
 # 移动Web端
 
 ## 基础知识入门
@@ -128,7 +127,6 @@
 ## hybrid
 
 1. [jsbridge基础知识](./mobile/jsbridge.md)
-
 
 # css
 
@@ -167,11 +165,8 @@
 ## 数据结构
 
 1. [链表](./data-structures-and-algorithms/structure.md)
-
 2. [堆](./data-structures-and-algorithms/structure.md)
-
 3. [二叉树](./data-structures-and-algorithms/tree.md)
-
 4. [图](./data-structures-and-algorithms/graph.md)
 
 
