@@ -45,8 +45,7 @@
 16. [闭包](./basis/closure.md)
 17. [模块简易管理](./basis/module.md)
 18. [动画性能优化](./basis/animation.md)
-19. [从零开始编写JavaScript框架]()
-
+19. [从零开始编写JavaScript框架](./basis/framework.md)
 
 ## html5
 
@@ -87,24 +86,41 @@
 
 待补充
 
-***
+## 书单
+
+1. [司徒正美《JavaScript 框架设计》](./book/frame-design/README.md)
+2. [Nicholas C.Zakas 《JavaScript 高级程序设计》](./book/professional-javascript/README.md)
+3. [Nicholas.C.Zakas《编写可维护的JavaScript》](./book/maintainable-javascript/README.md)
+4. [Nicholas.C.Zakas 《高性能JavaScript编程》](./book/high-performance)
+5. [Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》](./book/html5-programming/README.md)
+6. [Alex MacCaw  《JavaScript Web 富应用开发》](./book/developing-javascript-web-application/README.md)
+7. [John Resig\Bear Bibeault 《JavaScript 忍者秘籍》](./book/javascript-ninja.md)
+
+## 框架学习
+
+1. [Backbone](./framework/backbone/README.md)
+2. [jQuery](./framework/jquery)
+3. [Vue](./vue/README.md)
+4. [React](./react/README.md)
+
 
 # 移动Web端
 
-## [基础知识入门](./mobile/README.md)
+## 基础知识入门
 
-1. 像素基础
-2. viewport
-3. 布局（flexbox，响应式布局）
-4. 特殊样式处理
-5. 交互优化
+1. [像素基础](./mobile/README.md)
+2. [viewport](./mobile/README.md)
+3. [flex布局，响应式布局](./mobile/README.md)
+4. [特殊样式处理](./mobile/README.md)
+5. [交互优化](./mobile/README.md)
+6. [构建移动端项目](./mobile/build-a-mobile-project/README.md)
 
 ## fastclick解析
 
 1. [fastclick源码注释](./mobile/fastclick.md)
 2. [fastclick原理解析](./mobile/fastclick-1.md)
 
-## 移动端页面开发与调试
+## 开发与调试
 
 1. [debug](./mobile/debug.md)
 2. [性能优化，timeline使用](./tools/timeline.md)
@@ -113,33 +129,10 @@
 
 1. [jsbridge基础知识](./mobile/jsbridge.md)
 
-## [构建移动端项目](./mobile/build-a-mobile-project/README.md)
-
-***
-
-# 框架学习
-
-## backbone
-
-[MVC框架的学习](./framework/backbone/README.md)
-
-## jquery
-
-[jquery的操作总结](./framework/jquery)
-
-## vue
-
-[Vue.js的详细学习](./vue/README.md)
-
-## react
-
-[react的详细学习](./react/README.md)
-
-***
 
 # css
 
-## basis
+## 基础知识
 
 1. [盒子模型](./css/box.md)
 2. [层叠](./css/cascade.md)
@@ -151,65 +144,36 @@
 8. [响应式设计](./css/responsiveWebDesign.md)
 9. [元素大小和位置](./css/el-width-position.md)
 
-## css3
+## CSS3
 
 1. [flex布局](./css/css3/flex.md)
 2. [(尚未总结)transform](./css/css3/transform.md)
 3. [伪元素](./css/css3/selection.md)
 
-## framework
+## CSS框架
 
 1. [优秀CSS框架介绍](./css/framework/README.md)
 
-***
-
-# 书单
-
-## JavaScript框架设计
-
-[司徒正美《JavaScript 框架设计》](./book/frame-design/README.md)
-
-## JavaScript高级编程
-
-[Nicholas C.Zakas 《JavaScript 高级程序设计》](./book/professional-javascript/README.md)
-
-## 编写可维护的JavaScript
-
-[Nicholas.C.Zakas《编写可维护的JavaScript》](./book/maintainable-javascript/README.md)
-
-## 高性能JavaScript编程
-
-[Nicholas.C.Zakas 《高性能JavaScript编程》](./book/high-performance)
-
-## HTML5程序设计(2rd)
-
-[Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》](./book/html5-programming/README.md)
-
-## JavaScript web富应用开发
-
-[Alex MacCaw  《JavaScript Web 富应用开发》](./book/developing-javascript-web-application/README.md)
-
-***
-
 # 数据结构 & 算法
 
-### [基础排序](./data-structures-and-algorithms/basic-sort/README.md)
+## 基础排序
 
-1. 冒泡排序
-2. 选择排序
-3. 插入排序
-4. 归并排序
-5. 快速排序
+1. [冒泡排序](./data-structures-and-algorithms/basic-sort/README.md)
+2. [选择排序](./data-structures-and-algorithms/basic-sort/README.md)
+3. [插入排序](./data-structures-and-algorithms/basic-sort/README.md)
+4. [归并排序](./data-structures-and-algorithms/basic-sort/README.md)
+5. [快速排序](./data-structures-and-algorithms/basic-sort/README.md)
 
-### [链表](./data-structures-and-algorithms/structure.md)
+## 数据结构
 
-### [堆](./data-structures-and-algorithms/structure.md)
+1. [链表](./data-structures-and-algorithms/structure.md)
 
-### [二叉树](./data-structures-and-algorithms/tree.md)
+2. [堆](./data-structures-and-algorithms/structure.md)
 
-### [图](./data-structures-and-algorithms/graph.md)
+3. [二叉树](./data-structures-and-algorithms/tree.md)
 
-***
+4. [图](./data-structures-and-algorithms/graph.md)
+
 
 # 计算机基础知识
 
@@ -218,7 +182,6 @@
 3. [哈夫曼编码树](./computer-science/huff.md)
 4. [磁盘臂调度算法](./computer-science/disk.md)
 
-***
 
 # 杂记
 
