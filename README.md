@@ -46,6 +46,7 @@
 17. [模块简易管理](./basis/module.md)
 18. [动画性能优化](./basis/animation.md)
 19. [从零开始编写JavaScript框架](./basis/framework.md)
+20. [正则表达式学习](./basis/regexp.md)
 
 ## html5
 
@@ -88,13 +89,13 @@
 
 ## 书单
 
-1. [司徒正美《JavaScript 框架设计》](./book/frame-design/README.md)
-2. [Nicholas C.Zakas 《JavaScript 高级程序设计》](./book/professional-javascript/README.md)
-3. [Nicholas.C.Zakas《编写可维护的JavaScript》](./book/maintainable-javascript/README.md)
-4. [Nicholas.C.Zakas 《高性能JavaScript编程》](./book/high-performance)
-5. [Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》](./book/html5-programming/README.md)
-6. [Alex MacCaw  《JavaScript Web 富应用开发》](./book/developing-javascript-web-application/README.md)
-7. [John Resig\Bear Bibeault 《JavaScript 忍者秘籍》](./book/javascript-ninja.md)
+1. 司徒正美《JavaScript 框架设计》
+2. Nicholas C.Zakas 《JavaScript 高级程序设计》
+3. Nicholas.C.Zakas《编写可维护的JavaScript》
+4. Nicholas.C.Zakas 《高性能JavaScript编程》
+5. Peter Lubbers\Brian Albers\Frank Salim 《HTML5程序设计（2版）》
+6. Alex MacCaw  《JavaScript Web 富应用开发》
+7. John Resig\Bear Bibeault 《JavaScript 忍者秘籍》
 
 ## 框架学习
 
