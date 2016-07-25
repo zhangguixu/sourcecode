@@ -23,30 +23,33 @@
 */
 ```
 
-# 前端基础知识
+# 前端大杂烩
 
-## 杂记
+## 基础知识
 
 1. [数组属性和操作方法](./basis/array.md)
 2. [数据类型转换（显示或隐式）](./basis/data-type-transform.md)
-3. [高级技巧，高级函数，防篡改对象，高级定时器](./basis/advanced-skill.md)
-4. [正则表达式查阅表](./basis/regular-expression.md)
-5. [安全相关话题，js运行限制](./basis/security.md)
-6. [网页生成的过程及对性能的影响](./basis/page-performance.md)
-7. [head（头标签总结）](./basis/head.md)
-8. [this使用技巧总结](./basis/this.md)
-9. [事件循环机制](./basis/event-loop.md)
-10. [operator操作符的优先级](./basis/operator.md)
-11. [原型链](./basis/prototype-chain.md)
-12. [web前端图片知识](./basis/img.md)
+3. [正则表达式查阅表](./basis/regular-expression.md)
+4. [安全相关话题，js运行限制](./basis/security.md)
+5. [网页生成的过程及对性能的影响](./basis/page-performance.md)
+6. [head（头标签总结）](./basis/head.md)
+7. [this使用技巧总结](./basis/this.md)
+8. [operator操作符的优先级](./basis/operator.md)
+9. [原型链](./basis/prototype-chain.md)
+10. [web前端图片知识](./basis/img.md)
 13. [元素大小与坐标的计算](./basis/rect-position.md)
 14. [cookie](./basis/cookie.md)
 15. [JavaScript的小技巧](./basis/js-skill.md)
 16. [闭包](./basis/closure.md)
-17. [模块简易管理](./basis/module.md)
-18. [动画性能优化](./basis/animation.md)
-19. [从零开始编写JavaScript框架](./basis/framework.md)
-20. [正则表达式学习](./basis/regexp.md)
+
+## 进阶知识
+
+1. [事件循环机制](./advanced/event-loop.md)
+2. [正则表达式学习](./advanced/regexp.md)
+3. [高级技巧，高级函数，防篡改对象，高级定时器](./advanced/advanced-skill.md)
+4. [渲染性能优化](./advanced/paint-performance.md)
+5. [模块简易管理](./advanced/module.md)
+6. [从零开始编写JavaScript框架](./advanced/framework.md)
 
 ## html5
 
