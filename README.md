@@ -88,12 +88,12 @@
 
 ## 设计模式
 
-1. 单例模式(./design-pattern/singleton.md)
-2. 代理模式(./design-pattern/proxy.md)
-3. 桥接模式(./design-pattern/bridge.md)
-4. 门面模式(./design-pattern/fascade.md)
-5. 观察者模式(./design-pattern/pub-sub.md)
-6. 策略模式(./design-pattern/strategy.md)
+1. [单例模式](./design-pattern/singleton.md)
+2. [代理模式](./design-pattern/proxy.md)
+3. [桥接模式](./design-pattern/bridge.md)
+4. [门面模式](./design-pattern/fascade.md)
+5. [观察者模式](./design-pattern/pub-sub.md)
+6. [策略模式](./design-pattern/strategy.md)
 
 ## 书单
 
