@@ -50,6 +50,7 @@
 4. [渲染性能优化](./advanced/paint-performance.md)
 5. [模块简易管理](./advanced/module.md)
 6. [从零开始编写JavaScript框架](./advanced/framework.md)
+7. [内存管理](./advanced/memory.md)
 
 ## html5
 
