@@ -262,11 +262,68 @@ timeline统计的内存变化主要有：
 
 此外还可以通过`event log`看到这期间页面执行的操作
 
-正常的内存:
+#### profile
+
+`profile`面板我们关注的是`Take Heap Snapshot`和`Recode Heap Allocations`
+
+![timeline-profile.png](./img/timeline-profile.png)
+
+profile使用必须知道的：
+
+1. 标志为黄色的表示可能内存泄漏
+2. 标志为红色表示应该是发生内存泄漏
+
+在profile中的几个概念：
+
+1. (global property):全局对象，还有全局对象引用的对象
+2. (closure):闭包，这里需要关注一下
+3. (compiled code):V8会先代码编译成特定的语言，再执行
+4. (array,string,number,regexp):这些内置对象的引用
+5. HTML..Element：dom对象的引用
+
+**Take Heap Snapshot**
+
+使用快照，必须知道：
+
+1. 每次进行快照时，chrome都会先自动执行一个gc
+2. 只有活跃的值，才会反映在快照里
+
+快照有三个视图，它们分别有各自的作用
+
+1. [Summary View](https://developer.chrome.com/devtools/docs/heap-profiling-summary)
+
+    默认是以概要视图显示的，显示了对象总数，可以展开显示具体内容
+
+2. [Comparison View](https://developer.chrome.com/devtools/docs/heap-profiling-comparison)
+
+    该视图用来对照不同的快照来找到快照之间的差异
+
+3. [Containment View](https://developer.chrome.com/devtools/docs/heap-profiling-containment)
+
+    在这个视图中，包括三个点
+
+    * DOMWindow objects：js中的全局对象
+    * GC Root：VM垃圾回收所使用的GC Root
+    * Native Object：被放置到VM中的内置对象
+
+    好吧。暂时不知道有什么用？以后再补充。
+
+**Recode Heap Allocations**
+
+这个功能可以动态监控，通过次工具可以看到
+
+1. 什么时候分配了内存，刚刚分配的内存会以深蓝色的柱子表示，柱子越高，内存越大
+2. 什么时候回收了内存，内存被回收的时候，柱子变为灰色
+
+
+### 3. 案例检测
+
+
+[例子1](https://developer.chrome.com/devtools/docs/demos/memory/example1)：timeline来查看正常的内存
 
 ![timeline-memory-normal.png](./img/timeline-memory-normal.png)
 
-来看一个[内存泄漏](https://developer.chrome.com/devtools/docs/demos/memory/example1)的例子
+[例子2](https://developer.chrome.com/devtools/docs/demos/memory/example1)：通过timeline来发现内存泄漏
 
 ![timeline-memory-1](./img/timeline-memory-1.png)
 
@@ -280,21 +337,50 @@ timeline统计的内存变化主要有：
 
 ![timeline-memory-nodes.png](./img/timeline-memory-nodes.png)
 
-那么如何来定位问题的来源呢？这个时候就要用到面板的`profile`。
+例子3：验证快照之前会进行gc
 
-#### profile
+```javascript
+function Test (s) {
+    this.s = s;
+}
+var _test1 = new Test("__________test___1_________");
+var _test2 = new Test("__________test___2_________");
+new Test("你看不到我，就是这么神奇");
+```
 
-`profile`面板我们关注的是`Take Heap Snapshot`和`Recode Heap Allocations`
+![timeline-snapshot.png](./img/timeline-snapshot.png)
 
-![timeline-profile.png](./img/timeline-profile.png)
+[例子4]((https://developer.chrome.com/devtools/docs/heap-profiling-comparison))：通过snapshot来发现内存泄漏
+
+1. 打开例子之后，先进行一次快照
+2. 点击action，代表这用户的交互
+3. 再进行一次快照
+4. 使用comparison视图，对比两次快照，如图
+
+![comparison](./img/timeline-snapshot-comparison.png)
+
+可以看到，action之后，内存的数量是增加的（注意，已经gc过了），这说明web应用极有内存泄漏。
+
+*一个原则就是找到本不应该存在却还存在的那些值。*
+
+[例子5](https://developer.chrome.com/devtools/docs/heap-profiling-comparison)：通过内存分配的情况来分析
+
+![timeline-allcation.png](./img/timeline-allcation.png)
+
+点击蓝色的柱子，可以看到详细的情况，来进行分析
+
+[例子6](https://developer.chrome.com/devtools/docs/demos/memory/example2)：通过timeline来分析gc过于频繁导致卡顿的问题
+
+![timeline-gc](./img/timeline-gc.png)
+
+此例子在移动手机的浏览器进行测试，页面还是相对简单，在比较复杂的移动web应用，这种情况还是比较危险的，可能会导致页面卡死。
 
 
-**Take Heap Snapshot**
+### 4. 总结
 
+在平时的开发中，内存的管理基本靠js引擎来做，如今的像v8已经做的足够优秀了。
 
-**Recode Heap Allocations**
-
-
+但是内存泄漏确实应该值得我们注意，关于gc卡顿是在一篇写js游戏引擎中看到的，在实践中其实也遇过，但是偶尔一两次，某瞬间会卡住（这个时候估计就在gc）。
 
 
 
@@ -304,7 +390,8 @@ timeline统计的内存变化主要有：
 2. [What is GC](https://zh.wikipedia.org/wiki/%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6_(%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8))
 3. [Native Object & Host Object](http://es5.github.io/)
 4. [Chrome开发者工具之JavaScript内存分析](http://web.jobbole.com/81915/)
-5. [memory-101](https://developers.google.com/web/tools/chrome-devtools/profile/memory-problems/memory-101)
-6. [Series on dynamic memory management](https://blogs.msdn.microsoft.com/abhinaba/2009/01/25/back-to-basic-series-on-dynamic-memory-management/)
-7. [Google V8的垃圾回收引擎](http://www.infoq.com/cn/news/2015/08/Google-V8)
-8. [内存泄漏的测试例子](https://developer.chrome.com/devtools/docs/demos/memory/example1)
+5. [Series on dynamic memory management](https://blogs.msdn.microsoft.com/abhinaba/2009/01/25/back-to-basic-series-on-dynamic-memory-management/)
+6. [Google V8的垃圾回收引擎](http://www.infoq.com/cn/news/2015/08/Google-V8)
+7. [测试例子](https://developer.chrome.com/devtools/docs/demos/memory)
+8. [Snapshot官方教程](https://developers.google.com/web/tools/chrome-devtools/profile/memory-problems/heap-snapshots?hl=en#take-a-snapshot)
+9. [如何编写避免垃圾开销的实时Javascript代码](https://gold.xitu.io/entry/575d14937db2a2005437df32)
