@@ -23,6 +23,8 @@
 */
 ```
 
+本项目将迁徙到[gitbook](https://www.gitbook.com/@zhangguixu/)，在近期将会完成工作。
+
 # 前端大杂烩
 
 ## 基础知识
