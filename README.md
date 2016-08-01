@@ -66,6 +66,8 @@
 4. [compass](./tools/compass.md)
 5. [sublime](./tools/sublime.md)
 6. [visual studio code](./tools/visual-studio-code.md)
+7. [gitbooks](./tools/gitbook.md)
+
 
 ## form
 
