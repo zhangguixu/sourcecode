@@ -39,10 +39,10 @@
 8. [operator操作符的优先级](./basis/operator.md)
 9. [原型链](./basis/prototype-chain.md)
 10. [web前端图片知识](./basis/img.md)
-13. [元素大小与坐标的计算](./basis/rect-position.md)
-14. [cookie](./basis/cookie.md)
-15. [JavaScript的小技巧](./basis/js-skill.md)
-16. [闭包](./basis/closure.md)
+11. [元素大小与坐标的计算](./basis/rect-position.md)
+12. [cookie](./basis/cookie.md)
+13. [JavaScript的小技巧](./basis/js-skill.md)
+14. [闭包](./basis/closure.md)
 
 ## 进阶知识
 
