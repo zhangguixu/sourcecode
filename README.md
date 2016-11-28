@@ -23,6 +23,9 @@
 */
 ```
 
+由于gitbook国内的访问实在有点慢，所以决定将gitbook的内容和本项目的文章陆续搬到[个人博客](https://zhangguixu.github.io/)
+
+------------------------------------分割线-------------------------------------------------
 本项目将迁徙到[gitbook](https://zhangguixu.gitbooks.io/front-end/content/)，在近期将会完成工作。
 
 # 前端大杂烩
